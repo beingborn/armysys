@@ -1,0 +1,198 @@
+/****************************************************
+	파일명	: common.css
+	최초작성자	: 이민혁
+	최초작성일	: 2024-11-08
+	-------------------------------------------------
+	Dec. 육군 출입통제체제 스타일링
+	-------------------------------------------------
+	최종수정자	: 이민혁
+	최종수정일	: 2024-11-08
+	수정내용	: 최초작성
+	속성순서    : 레이아웃 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+	주의사항    : 선택자 최소 2개로 지정, CSS 우선 순위보다 낮게 지정
+*****************************************************/
+
+/* style */
+.red {background: red;}
+.blue {background: blue;}
+.green {background: green;}
+
+/* inner 2024/11/07 이민혁 추가 */
+#main-body {background: none;}
+.inner {max-width: 1920px; margin: 0px auto;}
+.inner.padding {padding-bottom: 15rem;}
+/* new border */
+.border-gray {border-color: #e8e8e8;}
+.border-left-gray30 {border-left: 1px solid var(--gray-30);}
+/* bg setting */
+.bg-fff {background: #fff;}
+
+/* ul list tyle */
+ul.text-black a {color: #000;}
+ul.demical > li {list-style: disc};
+/* inner */
+/* card */
+/* margin */
+.mt-120 {margin-top: 120px!important}
+.mt-60 {margin-top: 60px!important;}
+.mt-40 {margin-top: 40px!important}
+.mt-32 {margin-top: 32px!important}
+.mt-24 {margin-top: 24px!important}
+.ml-20 {margin-left: 20px!important;}
+.mb-20 {margin-bottom: 20px!important;}
+.mb-15 {margin-bottom: 15px!important;}
+.mr-15 {margin-right: 15px!important;}
+/* padding */
+.pl-20 {padding-left: 20px!important;}
+.pl-30 {padding-left: 30px!important;}
+.px-15 {padding: 0 15px;}
+/* font-size-17 */
+.font-size-17 {font-size: 17px;}
+/* gap */
+.gap-15 {gap: 15px;}
+.gap-16 {gap: 16px;}
+.gap-24 {gap: 24px;}
+/* position  */
+.p-relative {position: relative;}
+.p-absolute {position: absolute;}
+.p-absolute.left-align {left: 0;}
+/* width setting */
+.w-80p {width: 80px;}
+/* button group white-space nowrap */
+.noSpace-btn > button {white-space: nowrap;}
+
+
+/* border style */
+.border-gray30 {border: 1px solid var(--gray-30)!important;}
+
+/* header */
+header .header-inner {padding: 0 15px;}
+/* layout */
+/* gnb common style */
+.gnb {position: relative; z-index: 999;}
+.gnb-submenu { position: absolute; top: 100%; width: 100%; left: 0; padding-top: 20px; padding-left: 0; z-index: 10; height: 626px; color: black;}
+/* gnb-submenu styling */
+.gnb-submenu > li > a {color: #000;}
+.gnb-submenu > li > a:hover {font-weight: 700; text-decoration: none;}
+.gnb-bg {background: #fff; width: 100%; position: absolute; left: 0; height: 626px; top: 100%; z-index: 9; display: none;}
+
+/* gnb 1depth styling */
+.gnb .gnb-in > ul {margin: 0; padding: 0;}
+.gnb .gnb-in > ul > li {position: relative; text-align: center; width: 188px; height: 100%; line-height: 80px; box-sizing: border-box;}
+.gnb .gnb-in > ul > li:hover::after {content: ''; position: absolute;  left: 0; bottom: 0; width: 100%; height: 2px; }
+.gnb .gnb-in > ul > li > a {display: block; font-weight: 700; text-decoration: none;}
+.gnb .gnb-sub {display: none;}
+
+/* gnb-main */
+.gnb.main .gnb-submenu {display: none; color: #000;}
+.gnb.main {background: #007867; color: #fff;}
+/* main - 1depth styling*/
+.gnb.main .gnb-in > ul > li > a {color: #fff;}
+.gnb.main .gnb-in > ul > li:hover::after {background-color: #f8f134;}
+/* main open style */
+.gnb.main.is-open .gnb-submenu {display: flex; flex-direction: column; gap: 18px;}
+.gnb.main.is-open .gnb-bg {display: block;}
+.gnb.main.is-open .gnb-in > ul > li:hover .gnb-submenu {background: #f1f1f1;}
+
+/* gnb-all-menu */
+.gnb.all-menu .gnb-in > ul > li > a {color: #000;}
+.gnb.all-menu .gnb-submenu {display: flex; flex-direction: column; gap: 18px;}
+.gnb.all-menu .gnb-in > ul > li:hover::after {background-color: #007867;}
+
+
+/* footer bottom */
+.footer-top {height: 80px; display: flex; align-items: center; justify-content: center; background-color: #505050; color: #F1B647;}
+.footer-bottom {height: 224px; width: 100%; background: #eee; text-align: center;}
+.footer-logo {margin-bottom: 20px;}
+
+/* all menu */
+.all-menu-box {position: fixed; background: #fff; left: 0; top: 0; width: 100%; height: 100%; z-index: 9999; color: #000; display: none;}
+.all-menu-box.is-open {display: block;}
+.all-menu-header {height: 60px; display: flex; justify-content: space-between; align-items: center; padding: 0 15px;}
+
+/* new sidebar style */
+.sidebar .nav {font-size: inherit;}
+.sidebar .nav > li {line-height: 1.5;}
+.sidebar .nav .nav-item .nav-link .menu-title {font-size: 18px;}
+.sidebar .nav .nav-item .nav-link {color: #999999;}
+.sidebar .nav.sub-menu .nav-link {font-size: 16px;}
+.sidebar .nav .nav-item.depth-1 > a {color: #000; font-weight: 700;}
+.sidebar .nav .nav-item.depth-1 > a.is-active {background: #345C58; color: #fff!important; }
+.sidebar .nav .nav-item.depth-1 > a.is-active i.menu-arrow{ color: #fff!important;}
+.sidebar .nav .nav-item .nav-link {padding: 1.6rem;}
+.sidebar .nav .nav-item.active {background: #007867;}
+.sidebar .nav .nav-item.active > a {color: #fff!important;}
+
+/* col reset */
+.col-reset {margin-left: -15px; margin-right: -15px;}
+
+
+/* block */
+/* 신청 현황 */
+.current-dashboard-total {font-size: 36px;}
+.current-dashboard-card {padding: 28px; background: #fff; border: 1px solid #282f3a; border-radius: 20px; align-content: center; min-height: 180px;}
+.current-dashboard-rate {margin-top: 14px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;}
+.current-dashboard-state {font-size: 1.8rem; display: flex; align-items: center;}
+.current-dashboard-state::after {content: ''; width: 2rem; height: 2rem; background-size: contain; display: inline-block;}
+.current-dashboard-state.is-increase {color: var(--green6cc);}
+.current-dashboard-state.is-increase::after {background: url(../images/ico_arr_20_top_fill.svg) no-repeat center;}
+.current-dashboard-state.is-decrease::after {background: url(../images/ico_arr_20_bottom_fill.svg) no-repeat center;}
+.current-dashboard-state.is-decrease {color: var(--redff5);}
+
+/* search-field */
+.search-field {padding-top: 40px; padding-bottom: 40px; background: #fff; border-radius: 16px; border: 1px solid var(--gray-30);}
+.search-field .form-label {font-size: 14px; margin-right: 14px; white-space: nowrap; margin-bottom: 0; align-content: center;}
+.search-field .start-end-date {transform: translateY(0);}
+
+/* table 스타일 */
+table.td-whiteBg td {background: #fff;}
+.expandable-table {border-bottom: 1px solid var(--gray-30)}
+.expandable-table tr td {font-size: 14px; padding: 16px;}
+table.horizontal {border-right: 1px solid #ced4da; border-left: 1px solid var(--gray-30);}
+table.horizontal th {background: #007867; color: #fff; font-weight: 400; border-right: var(--gray-30);}
+table.horizontal label {font-weight: 400; margin: 0; font-size: inherit;}
+
+/* 필수 입력 (임시) */
+.must-type::after {content: '*'; margin-left: 2px; color: #e92e28;}
+
+/* echart */
+.echart {height: 400px; width: 100%;}
+
+/* board-list */
+.board-list ul > li > a {max-width: 99%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: inline-flex;}
+
+/* after label style */
+.after-ico-16 {display: inline-flex; align-items: center; gap: 8px;}
+.after-ico-16::after {content: ''; background-size: 16px 16px; width: 16px; height: 16px; display: inline-block; background-repeat: no-repeat; background-position: center;}
+.after-ico-16.new-item::after {background-image: url(../images/ico-new.svg); background-size: contain;}
+
+/* h4 area flex (더보기 포함) */
+.h4-area-flex {display: flex; justify-content: space-between; margin-bottom: 20px;}
+.h4-area-flex > h4 {margin: 0; padding: 0;}
+.h3-area-flex {display: flex; justify-content: space-between; margin-bottom: 20px;}
+.h5-area-flex {display: flex; justify-content: space-between; margin-bottom: 20px;}
+.h5-area-flex > h5 {margin: 0; padding: 0;}
+
+/* main-section */
+.section-1 {position: relative; padding-top: 60px; padding-bottom: 20px;}
+.section-1 .section-bg {position: absolute; top: 0; width: 100vw; background: #f9faf9; height: 100%; margin-left: calc(-50vw + 50%); z-index: -1;}
+
+/* login box */
+.login-box {padding: 60px; background: #fff; border-radius: 20px; border: 1px solid var(--gray-30);}
+/* auth-form padding */
+.auth-form-padding {padding: 1.875rem;}
+.login-notice-title {padding-bottom: 6px; border-bottom: 1px solid #1f1f1f;}
+
+/* 임시 datepicker zindex */
+.datepicker {z-index: 2000!important;}
+.expandable-table tr td.hasAnotherTag {padding: 9px 16px;}
+.expandable-table tr td.hasAnotherTag input, 
+.expandable-table tr td.hasAnotherTag select
+{height: 32px; border: 1px solid #ddd; width: var(--input-width, 100%); min-height: auto;}
+.expandable-table tr td.hasAnotherTag select {padding: 6px 16px;}
+.expandable-table tr td.hasAnotherTag textarea {border: 1px solid #ddd; width: 100%; height: var(--area-height, 200px); padding: 10px 18px;}
+
+
+
+
+

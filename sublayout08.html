@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>출입통제체계</title>
+        <!-- plugins:css -->
+        <link rel="stylesheet" href="vendors/feather/feather.css" />
+        <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" />
+        <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
+        <!-- endinject -->
+        <!-- Plugin css for this page -->
+        <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css" />
+        <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" />
+        <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css" />
+        <!-- End plugin css for this page -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tempus-dominus/6.0.0/css/tempus-dominus.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <!-- inject:css -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/common-v2.css">
+        <!-- endinject -->
+        <link rel="shortcut icon" href="images/favicon.png" />
+        <script src="vendors/js/vendor.bundle.base.js"></script>
+        <!-- DatePicker jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <!-- Bootstrap Datepicker CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+            rel="stylesheet" />
+        <!-- Bootstrap Datepicker JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ko.min.js"></script>
+    </head>
+    <body>
+        <div class="container-scroller">
+            <!-- header -->
+            <header>
+                <nav class="navbar col-lg-12 p-0 d-flex flex-row">
+                    <div class="d-flex header-inner inner w-100">
+                    <!-- header-logo -->
+                    <div class="text-center d-flex justify-content-center align-items-center">
+                        <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" class="mr-2" alt="출입통제체계 (Access Control System)"/></a>
+                        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="출입통제체계 (Access Control System) 미니 로고버전"/></a>
+                    </div>
+                    <!-- ./ header-logo -->
+                    <!-- navbar right fn -->
+                    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                        <ul class="navbar-nav navbar-nav-right">
+                        <li class="nav-item nav-header">
+                            최근접속 2024.10.01 09:17:41
+                        </li>
+                        <li class="nav-item nav-header">
+                            2급 홍길동
+                        </li>
+                        <li class="nav-item nav-header">
+                            <a class="nav-link" href="#">
+                            <i class="ti-power-off"></i>
+                            <span>로그아웃</span>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    <!-- navbar right fn -->
+                    </div>
+                </nav>
+                <div class="gnb main align-items-center d-flex">
+                    <div class="inner w-100 d-flex align-items-center gnb-in">
+                    <ul class="d-flex align-items-center">
+                        <li class="main-dep1">
+                        <a href="#">출입신청관리</a>
+                        <ul class="gnb-submenu dep2">
+                            <li><a href="#">출입신청현황</a></li>
+                            <li><a href="#">인원별현황</a></li>
+                            <li><a href="#">기간별현황 대시보드</a></li>
+                            <li><a href="#">부대현황 대시보드</a></li>
+                            <li><a href="#">총괄 출입신청 현황</a></li>
+                            <li><a href="#">신청현황</a></li>
+                            <li><a href="#">승인현황</a></li>
+                        </ul>
+                        </li>
+                        <li class="main-dep1">
+                        <a href="#">사용자관리</a>
+                        <ul class="gnb-submenu dep2">
+                            <li><a href="#">메뉴1</a></li>
+                            <li><a href="#">메뉴2</a></li>
+                            <li><a href="#">메뉴3</a></li>
+                            <li><a href="#">메뉴4</a></li>
+                            <li><a href="#">메뉴5</a></li>
+                        </ul>
+                        </li>
+                        <li class="main-dep1">
+                        <a href="#">부대정보관리</a>
+                        <ul class="gnb-submenu dep2">
+                            <li><a href="#">메뉴1</a></li>
+                            <li><a href="#">메뉴2</a></li>
+                            <li><a href="#">메뉴3</a></li>
+                            <li><a href="#">메뉴4</a></li>
+                            <li><a href="#">메뉴5</a></li>
+                        </ul>
+                        </li>
+                        <li class="main-dep1">
+                        <a href="#">시스템관리</a>
+                        <ul class="gnb-submenu dep2">
+                            <li><a href="#">메뉴1</a></li>
+                            <li><a href="#">메뉴2</a></li>
+                            <li><a href="#">메뉴3</a></li>
+                            <li><a href="#">메뉴4</a></li>
+                            <li><a href="#">메뉴5</a></li>
+                        </ul>
+                        </li>
+                        <li class="main-dep1">
+                        <a href="#">모니터링</a>
+                        <ul class="gnb-submenu dep2">
+                            <li><a href="#">메뉴1</a></li>
+                            <li><a href="#">메뉴2</a></li>
+                            <li><a href="#">메뉴3</a></li>
+                            <li><a href="#">메뉴4</a></li>
+                            <li><a href="#">메뉴5</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    <div class="nav-link ml-auto">
+                        <a href="#" class="all-menu">
+                        <i class="ti-menu"></i>
+                        </a>
+                        <!-- all-menu -->
+                        <div class="all-menu-box">
+                        <div class="inner">
+                            <!-- all-menu-header -->
+                            <div class="all-menu-header">
+                            <div class="all-menu-logo brand-logo">
+                                <a href="#" class="navbar-brand">
+                                <img src="./images/logo-transparent.svg" alt="전체 메뉴 로고">
+                                </a>
+                            </div>
+                            <button class="all-menu-close btn btn-txt pr-0 pl-0">
+                                <i class="ti-close text-dark"></i>
+                            </button>
+                            </div>
+                            <!-- .// all-menu-header -->
+                            <!-- all-menu-body -->
+                            <div class="all-menu-body">
+                            <div class="gnb all-menu">
+                                <div class="gnb-in">
+                                <ul class="d-flex align-items-center">
+                                    <li>
+                                    <a href="#">출입신청관리</a>
+                                    <ul class="gnb-submenu dep2">
+                                        <li><a href="#">출입신청현황</a></li>
+                                        <li><a href="#">인원별현황</a></li>
+                                        <li><a href="#">기간별현황 대시보드</a></li>
+                                        <li><a href="#">부대현황 대시보드</a></li>
+                                        <li><a href="#">총괄 출입신청 현황</a></li>
+                                        <li><a href="#">신청현황</a></li>
+                                        <li><a href="#">승인현황</a></li>
+                                    </ul>
+                                    </li>
+                                    <li>
+                                    <a href="#">사용자관리</a>
+                                    <ul class="gnb-submenu dep2">
+                                        <li><a href="#">메뉴1</a></li>
+                                        <li><a href="#">메뉴2</a></li>
+                                        <li><a href="#">메뉴3</a></li>
+                                        <li><a href="#">메뉴4</a></li>
+                                        <li><a href="#">메뉴5</a></li>
+                                    </ul>
+                                    </li>
+                                    <li>
+                                    <a href="#">부대정보관리</a>
+                                    <ul class="gnb-submenu dep2">
+                                        <li><a href="#">메뉴1</a></li>
+                                        <li><a href="#">메뉴2</a></li>
+                                        <li><a href="#">메뉴3</a></li>
+                                        <li><a href="#">메뉴4</a></li>
+                                        <li><a href="#">메뉴5</a></li>
+                                    </ul>
+                                    </li>
+                                    <li>
+                                    <a href="#">시스템관리</a>
+                                    <ul class="gnb-submenu dep2">
+                                        <li><a href="#">메뉴1</a></li>
+                                        <li><a href="#">메뉴2</a></li>
+                                        <li><a href="#">메뉴3</a></li>
+                                        <li><a href="#">메뉴4</a></li>
+                                        <li><a href="#">메뉴5</a></li>
+                                    </ul>
+                                    </li>
+                                    <li>
+                                    <a href="#">모니터링</a>
+                                    <ul class="gnb-submenu dep2">
+                                        <li><a href="#">메뉴1</a></li>
+                                        <li><a href="#">메뉴2</a></li>
+                                        <li><a href="#">메뉴3</a></li>
+                                        <li><a href="#">메뉴4</a></li>
+                                        <li><a href="#">메뉴5</a></li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                                </div>
+                            </div>
+                            </div>
+                            <!-- ./ all-menu-body -->
+                        </div>
+                        </div>
+                        <!-- .// all-menu -->
+                    </div>
+                    </div>
+                    <div class="gnb-bg"></div>
+                </div>
+            </header>
+            <!-- ./ header -->
+            <!-- partial -->
+            <div class="container-fluid page-body-wrapper">
+                <div class="theme-setting-wrapper">
+                    <div id="settings-trigger"><i class="ti-arrow-up"></i></div>
+                </div>
+                <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                    <ul class="nav">
+                        <li class="nav-item depth-1">
+                        <a class="nav-link is-active" data-toggle="collapse" href="#form-elements" aria-expanded="false"
+                            aria-controls="form-elements">
+                            <span class="menu-title">출입증 관리</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse show" id="form-elements">
+                            <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">출입신청현황</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">인원별현황</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">기간별현황 대시보드</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">기간별현황</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">부대별현황 대시보드</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">부대별현황</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">총괄 출입신청현황</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">신청현황</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">승인현황</a>
+                            </li>
+                            </ul>
+                        </div>
+                        </li>
+                        <li class="nav-item depth-1">
+                        <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+                            <span class="menu-title">이력 현황</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="icons">
+                            <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" href="#">2depth</a></li>
+                            </ul>
+                        </div>
+                        </li>
+                        <li class="nav-item depth-1">
+                        <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                            <span class="menu-title">인사 연동 관리</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="auth">
+                            <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" href="#">2depth</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="#">2depth</a></li>
+                            </ul>
+                        </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="main-panel">
+                    <div class="content-wrapper">
+                        <div class="content-top">
+                            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <i class="fa fa-home mr-1"></i>
+                                    <a href="#">홈</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="#">출입신청관리</a>
+                                </li>
+                                <li class="breadcrumb-item active">
+                                    <a href="#">부대별현황 대시보드</a>
+                                </li>
+                                </ol>
+                            </nav>
+                            <div class="col-sm-12">
+                                <h2 class="font-weight-bold text-left">부대별현황 대시보드</h2>
+                            </div>
+                            <!-- content -->
+                            <section class="mt-40 col-md-12">
+                                <div class="mb-20 text-right">
+                                    <p>[ 조회 기준 시 : 2024-12-01 12:56:48 ]</p>
+                                </div>
+                                <!-- 검색 영역 -->
+                                <div class="search-field d-flex align-items-center flex-column">
+                                    <!-- search 1st col -->
+                                    <div class="d-flex mb-15 col-lg-10 col-md-12 justify-content-center">
+                                        <select id="ex2" class="form-select col-lg-2 mr-15">
+                                            <option selected="" disabled="" value="">전체</option>
+                                            <option value="1">소속부대명</option>
+                                            <option value="2">군번</option>
+                                            <option value="3">이름</option>
+                                            <option value="4">방문부대</option>
+                                            <option value="4">신청자</option>
+                                        </select>
+                                        <div class="col-lg-8">
+                                            <input type="text" class="form-control" placeholder="검색어를 입력하세요.">
+                                        </div>
+                                    </div>
+                                    <!-- .// search 1st col -->
+                                    <div class="d-flex mb-15 col-lg-10 justify-content-center">
+                                        <select id="ex2" class="form-select col-lg-2 mr-15">
+                                            <option selected="" disabled="" value="">전체</option>
+                                            <option value="1">소속부대명</option>
+                                            <option value="2">군번</option>
+                                            <option value="3">이름</option>
+                                            <option value="4">방문부대</option>
+                                            <option value="4">신청자</option>
+                                        </select>
+                                        <div class="col-lg-8">
+                                            <div class="d-flex">
+                                                <!-- date picker -->
+                                                <label for="datepicker" class="form-label">기간 설정</label>
+                                                <div class="datepicker-container flex-grow-1">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                                                            <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker0">
+                                                                <span class="input-group-text">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </span>
+                                                            <div id="" class="invalid-feedback">
+                                                            올바른 형식이 아닙니다.
+                                                            </div>
+                                                        </div>
+                                                        <p class="start-end-date mx-2">~</p>
+                                                    <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                                                        <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker1">
+                                                            <span class="input-group-text">
+                                                                <i class="fa fa-calendar"></i>
+                                                            </span>
+                                                        <div id="" class="invalid-feedback">
+                                                        올바른 형식이 아닙니다.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- .// date picker -->
+                                            <div class="d-flex pl-30 noSpace-btn">
+                                                <button type="button" class="btn btn-outline-secondary btn-sm mr-15">초기화</button>
+                                                <button type="button" class="btn btn-primary btn-sm">검색</button>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ./ 검색 영역 -->
+                                <!-- 기간별 출입현황 -->
+                                <div class="mt-60">
+                                    <div class="h4-area-flex">
+                                        <h4>기간별 출입신청현황</h4>
+                                    </div>
+                                    <div class="card border-gray30 e-container">
+                                        <div id="periodConditionBar" class="echart">E차트 업데이트 전</div>
+                                    </div>
+                                </div>
+                                <!-- ./ 기간별 출입현황 -->
+                                <!-- 기간별 인원현황 -->
+                                <div class="mt-60">
+                                    <div class="h4-area-flex">
+                                        <h4>기간별 인원현황</h4>
+                                    </div>
+                                    <div class="cardgroup d-flex current-dashboard col-reset                ">
+                                        <div class="col-md-3">
+                                            <div class="current-dashboard-card border">
+                                                <span>현역/군무원/공무직</span>
+                                                <div class="current-dashboard-rate">
+                                                <h2 class="m-0 current-dashboard-total">1,349</h2>
+                                                <span class="current-dashboard-state is-increase">+21</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="current-dashboard-card border">
+                                                <span>병사</span>
+                                                <div class="current-dashboard-rate">
+                                                <h2 class="m-0 current-dashboard-total">17</h2>
+                                                <span class="current-dashboard-state is-increase">+21</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="current-dashboard-card border">
+                                                <span>민간인</span>
+                                                <div class="current-dashboard-rate">
+                                                <h2 class="m-0 current-dashboard-total">8</h2>
+                                                <span class="current-dashboard-state is-decrease">-21</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="current-dashboard-card border">
+                                                <span>고정출입자</span>
+                                                <div class="current-dashboard-rate">
+                                                <h2 class="m-0 current-dashboard-total">23</h2>
+                                                <span class="current-dashboard-state is-increase">+21</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ./ 기간별 인원현황 -->
+                                <!-- 기간별 신청현황 -->
+                                <div class="mt-60">
+                                    <div class="h4-area-flex align-items-center">
+                                        <h4>기간별 신청현황</h4>
+                                    </div>
+                                    <div class="row">
+                                        <!-- 출입자 수, 출입 신청 수 -->
+                                        <div class="col-md-6">
+                                            <div class="h5-area-flex align-items-center">
+                                                <h5>주간별 출입신청현황</h5>
+                                            </div>
+                                            <div class="card border-gray30">
+                                            <div id="weekCondition" class="echart">E차트 업데이트 전</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="h5-area-flex align-items-center">
+                                                <h5>당월 출입신청현황</h5>
+                                            </div>
+                                            <div class="card border-gray30">
+                                            <div id="monthCondition" class="echart">E차트 업데이트 전</div>
+                                            </div>
+                                        </div>
+                                        <!-- ./ 출입자 수, 출입 신청 수 -->
+                                        <!-- 출입 신청 대기현황, 차량 등록 현황 -->
+                                        <div class="col-md-6 mt-40">
+                                            <div class="h5-area-flex align-items-center">
+                                                <h5>당월 출입신청현황</h5>
+                                            </div>
+                                            <div class="table-scroll">
+                                                <table class="table display expandable-table pd-5 td-whiteBg horizontal">
+                                                    <colgroup>
+                                                        <col style="width: 300px;">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>출입신청대기</th>
+                                                            <td>31건</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>소속부대원 출입(증) 신청 승인 대기</th>
+                                                            <td>15건</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mt-40">
+                                            <div class="h5-area-flex align-items-center">
+                                                <h5>당월 출입신청현황</h5>
+                                            </div>
+                                            <div class="table-scroll">
+                                                <table class="table display expandable-table pd-5 td-whiteBg horizontal">
+                                                    <colgroup>
+                                                        <col style="width: 300px;">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>출입신청대기</th>
+                                                            <td>31건</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>소속부대원 출입(증) 신청 승인 대기</th>
+                                                            <td>15건</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <!-- ./ 출입 신청 대기현황, 차량 등록 현황 -->
+                                    </div>
+                                    <!-- 기간별 승인 현황 -->
+                                    <div class="h4-area-flex mt-40">
+                                        <h4>기간별 승인 현황</h4>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card border-gray30">
+                                                <div id="weekCondition" class="echart">E차트 업데이트 전</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="table-scroll">
+                                                <table class="table display expandable-table pd-5 td-whiteBg horizontal">
+                                                    <colgroup>
+                                                        <col style="width: 300px;">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>출입신청대기</th>
+                                                            <td>31건</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>소속부대원 출입(증) 신청 승인 대기</th>
+                                                            <td>15건</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>승인 완료 건수</th>
+                                                            <td>15건</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>승인 반려 건수</th>
+                                                            <td>15건</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ./ 기간별 승인 현황 -->
+                                </div>
+                                <!-- ./ 기간별 신청현황 -->
+                            </section>
+                            <!-- ./ content -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./ partial -->
+            <!-- footer -->
+            <footer>
+                <div class="footer-top">
+                    <span>※ 부당한 방법으로 본 체계에 접속하거나 정보를 유출·삭제·변경하는 자는 관계 법령에 따라 처벌을 받습니다.</span>          
+                </div>
+                <div class="footer-bottom d-flex align-items-center justify-content-center">
+                <div class="footer-bottom-inner">
+                    <div class="footer-logo">
+                    <img src="images/logo-footer.svg" alt="푸터전용 로고">
+                    </div>
+                    <p>Copyright © 대한민국 육군 . All Right Reserved.</p>
+                </div>  
+                </div>
+            </footer>
+            <!-- .// footer -->
+        </div>
+        <!-- container-scroller -->
+        <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+        <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+        <script src="js/dataTables.select.min.js"></script>
+
+        <script src="js/off-canvas.js"></script>
+        <script src="js/hoverable-collapse.js"></script>
+        <script src="js/template.js"></script>
+        <script src="js/settings.js"></script>
+        <script src="js/todolist.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tempus-dominus/6.0.0/js/tempus-dominus.min.js"></script>
+        <!-- plugin echart -->
+        <script src="vendors/echart.js/echarts.min.js"></script>
+        <script src="vendors/echart.js/wonderland.js"></script>
+        <script src="js/file-upload.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/main-v2.js"></script>
+    </body>
+</html>

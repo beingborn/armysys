@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>출입통제체계</title>
+        <!-- plugins:css -->
+        <link rel="stylesheet" href="vendors/feather/feather.css" />
+        <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" />
+        <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
+        <!-- endinject -->
+        <!-- Plugin css for this page -->
+        <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css" />
+        <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" />
+        <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css" />
+        <!-- End plugin css for this page -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tempus-dominus/6.0.0/css/tempus-dominus.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <!-- inject:css -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/common-v2.css">
+        <!-- endinject -->
+        <link rel="shortcut icon" href="images/favicon.png" />
+        <script src="vendors/js/vendor.bundle.base.js"></script>
+        <!-- DatePicker jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <!-- Bootstrap Datepicker CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+            rel="stylesheet" />
+        <!-- Bootstrap Datepicker JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ko.min.js"></script>
+    </head>
+    <body>
+    <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <header>
+    <nav class="navbar col-lg-12 p-0 d-flex flex-row">
+        <div class="d-flex header-inner inner w-100">
+        <!-- header-logo -->
+        <div class="text-center d-flex justify-content-center align-items-center">
+            <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" class="mr-2" alt="출입통제체계 (Access Control System)"/></a>
+            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="출입통제체계 (Access Control System) 미니 로고버전"/></a>
+        </div>
+        <!-- ./ header-logo -->
+        <!-- navbar right fn -->
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+            <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-header">
+                최근접속 2024.10.01 09:17:41
+            </li>
+            <li class="nav-item nav-header">
+                2급 홍길동
+            </li>
+            <li class="nav-item nav-header">
+                <a class="nav-link" href="#">
+                <i class="ti-power-off"></i>
+                <span>로그아웃</span>
+                </a>
+            </li>
+            </ul>
+        </div>
+        <!-- navbar right fn -->
+        </div>
+    </nav>
+    <div class="gnb main align-items-center d-flex">
+        <div class="inner w-100 d-flex align-items-center gnb-in">
+        <ul class="d-flex align-items-center">
+            <li class="main-dep1">
+            <a href="#">출입신청관리</a>
+            <ul class="gnb-submenu dep2">
+                <li><a href="#">출입신청현황</a></li>
+                <li><a href="#">인원별현황</a></li>
+                <li><a href="#">기간별현황 대시보드</a></li>
+                <li><a href="#">부대현황 대시보드</a></li>
+                <li><a href="#">총괄 출입신청 현황</a></li>
+                <li><a href="#">신청현황</a></li>
+                <li><a href="#">승인현황</a></li>
+            </ul>
+            </li>
+            <li class="main-dep1">
+            <a href="#">사용자관리</a>
+            <ul class="gnb-submenu dep2">
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+                <li><a href="#">메뉴5</a></li>
+            </ul>
+            </li>
+            <li class="main-dep1">
+            <a href="#">부대정보관리</a>
+            <ul class="gnb-submenu dep2">
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+                <li><a href="#">메뉴5</a></li>
+            </ul>
+            </li>
+            <li class="main-dep1">
+            <a href="#">시스템관리</a>
+            <ul class="gnb-submenu dep2">
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+                <li><a href="#">메뉴5</a></li>
+            </ul>
+            </li>
+            <li class="main-dep1">
+            <a href="#">모니터링</a>
+            <ul class="gnb-submenu dep2">
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+                <li><a href="#">메뉴5</a></li>
+            </ul>
+            </li>
+        </ul>
+        <div class="nav-link ml-auto">
+            <a href="#" class="all-menu">
+            <i class="ti-menu"></i>
+            </a>
+            <!-- all-menu -->
+            <div class="all-menu-box">
+            <div class="inner">
+                <!-- all-menu-header -->
+                <div class="all-menu-header">
+                <div class="all-menu-logo brand-logo">
+                    <a href="#" class="navbar-brand">
+                    <img src="./images/logo-transparent.svg" alt="전체 메뉴 로고">
+                    </a>
+                </div>
+                <button class="all-menu-close btn btn-txt pr-0 pl-0">
+                    <i class="ti-close text-dark"></i>
+                </button>
+                </div>
+                <!-- .// all-menu-header -->
+                <!-- all-menu-body -->
+                <div class="all-menu-body">
+                <div class="gnb all-menu">
+                    <div class="gnb-in">
+                    <ul class="d-flex align-items-center">
+                        <li>
+                        <a href="#">출입신청관리</a>
+                        <ul class="gnb-submenu dep2">
+                            <li><a href="#">출입신청현황</a></li>
+                            <li><a href="#">인원별현황</a></li>
+                            <li><a href="#">기간별현황 대시보드</a></li>
+                            <li><a href="#">부대현황 대시보드</a></li>
+                            <li><a href="#">총괄 출입신청 현황</a></li>
+                            <li><a href="#">신청현황</a></li>
+                            <li><a href="#">승인현황</a></li>
+                        </ul>
+                        </li>
+                        <li>
+                        <a href="#">사용자관리</a>
+                        <ul class="gnb-submenu dep2">
+                            <li><a href="#">메뉴1</a></li>
+                            <li><a href="#">메뉴2</a></li>
+                            <li><a href="#">메뉴3</a></li>
+                            <li><a href="#">메뉴4</a></li>
+                            <li><a href="#">메뉴5</a></li>
+                        </ul>
+                        </li>
+                        <li>
+                        <a href="#">부대정보관리</a>
+                        <ul class="gnb-submenu dep2">
+                            <li><a href="#">메뉴1</a></li>
+                            <li><a href="#">메뉴2</a></li>
+                            <li><a href="#">메뉴3</a></li>
+                            <li><a href="#">메뉴4</a></li>
+                            <li><a href="#">메뉴5</a></li>
+                        </ul>
+                        </li>
+                        <li>
+                        <a href="#">시스템관리</a>
+                        <ul class="gnb-submenu dep2">
+                            <li><a href="#">메뉴1</a></li>
+                            <li><a href="#">메뉴2</a></li>
+                            <li><a href="#">메뉴3</a></li>
+                            <li><a href="#">메뉴4</a></li>
+                            <li><a href="#">메뉴5</a></li>
+                        </ul>
+                        </li>
+                        <li>
+                        <a href="#">모니터링</a>
+                        <ul class="gnb-submenu dep2">
+                            <li><a href="#">메뉴1</a></li>
+                            <li><a href="#">메뉴2</a></li>
+                            <li><a href="#">메뉴3</a></li>
+                            <li><a href="#">메뉴4</a></li>
+                            <li><a href="#">메뉴5</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+                <!-- ./ all-menu-body -->
+            </div>
+            </div>
+            <!-- .// all-menu -->
+        </div>
+        </div>
+        <div class="gnb-bg"></div>
+    </div>
+    </header>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_settings-panel.html -->
+            <div class="theme-setting-wrapper">
+                <div id="settings-trigger"><i class="ti-arrow-up"></i></div>
+            </div>
+            <!-- partial -->
+            <!-- partial:partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <ul class="nav">
+                <li class="nav-item depth-1">
+                <a class="nav-link is-active" data-toggle="collapse" href="#form-elements" aria-expanded="false"
+                    aria-controls="form-elements">
+                    <span class="menu-title">출입증 관리</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse show" id="form-elements">
+                    <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">출입신청현황</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">인원별현황</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">기간별현황 대시보드</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">기간별현황</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">부대별현황 대시보드</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">부대별현황</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">총괄 출입신청현황</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">신청현황</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">승인현황</a>
+                    </li>
+                    </ul>
+                </div>
+                </li>
+                <li class="nav-item depth-1">
+                <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+                    <span class="menu-title">이력 현황</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="icons">
+                    <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="#">2depth</a></li>
+                    </ul>
+                </div>
+                </li>
+                <li class="nav-item depth-1">
+                <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                    <span class="menu-title">인사 연동 관리</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="auth">
+                    <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="#">2depth</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">2depth</a></li>
+                    </ul>
+                </div>
+                </li>
+            </ul>
+            </nav>
+            <!-- partial -->
+            <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="content-top">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <i class="fa fa-home mr-1"></i>
+                        <a href="#">홈</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">출입신청관리</a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        <a href="#">승인현황</a>
+                    </li>
+                    </ol>
+                </nav>
+                <div class="col-sm-12">
+                    <h2 class="font-weight-bold text-left">승인현황</h2>
+                </div>
+                </div>
+                <!-- 월별 출입 신청 현황 -->
+                <section class="mt-40 col-md-12">
+                <!-- 검색 영역 -->
+                    <div class="search-field d-flex align-items-center flex-column">
+                        <!-- search 1st col -->
+                        <div class="d-flex mb-15 col-lg-10 col-md-12 justify-content-center">
+                            <select id="ex2" class="form-select col-lg-2 mr-15">
+                                <option selected="" disabled="" value="">전체</option>
+                                <option value="1">소속부대명</option>
+                                <option value="2">군번</option>
+                                <option value="3">이름</option>
+                                <option value="4">방문부대</option>
+                                <option value="4">신청자</option>
+                            </select>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" placeholder="검색어를 입력하세요.">
+                            </div>
+                        </div>
+                        <!-- .// search 1st col -->
+                        <div class="d-flex mb-15 col-lg-10 justify-content-center">
+                            <select id="ex2" class="form-select col-lg-2 mr-15">
+                                <option selected="" disabled="" value="">전체</option>
+                                <option value="1">소속부대명</option>
+                                <option value="2">군번</option>
+                                <option value="3">이름</option>
+                                <option value="4">방문부대</option>
+                                <option value="4">신청자</option>
+                            </select>
+                            <div class="col-lg-8">
+                                <div class="d-flex">
+                                    <!-- date picker -->
+                                    <label for="datepicker" class="form-label">기간 설정</label>
+                                    <div class="datepicker-container flex-grow-1">
+                                        <div class="d-flex align-items-center">
+                                            <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                                                <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker2">
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </span>
+                                                <div id="" class="invalid-feedback">
+                                                올바른 형식이 아닙니다.
+                                                </div>
+                                            </div>
+                                            <p class="start-end-date mx-2">~</p>
+                                            <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                                                <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker3">
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </span>
+                                                <div id="" class="invalid-feedback">
+                                                올바른 형식이 아닙니다.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- .// date picker -->
+                                    <div class="d-flex pl-30 noSpace-btn">
+                                        <button type="button" class="btn btn-outline-secondary btn-sm mr-15">초기화</button>
+                                        <button type="button" class="btn btn-primary btn-sm">검색</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- .// 검색영역 -->
+                <section class="col-lg-12">
+                    <div class="row mt-40">
+                        <div class="col-lg-12">
+                        <div class="d-flex align-items-center gap-3">
+                            <span>총 123건</span>
+                            <button type="button" class="btn btn-dark btn-xs">
+                            <img src="./images/excel-icon.svg" alt="excel-down-icon">
+                            다운로드
+                            </button>
+                        </div>
+                        <div class="card mt-40 border-gray30">
+                            <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                <div class="table-scroll">
+                                    <table class="table display expandable-table text-center pb-5">
+                                        <thead>
+                                            <tr>
+                                                <th>구분</th>
+                                                <th>소속부서</th>
+                                                <th>군번</th>
+                                                <th>계급/직급</th>
+                                                <th>출입자</th>
+                                                <th>출입목적</th>
+                                                <th>출입일자</th>
+                                                <th>출입권한</th>
+                                                <th>신청자</th>
+                                                <th>1차승인자</th>
+                                                <th>2차승인자</th>
+                                                <th>결재상태</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>현역</td>
+                                                <td>전체</td>
+                                                <td>222-2222</td>
+                                                <td>일병</td>
+                                                <td>홍길동</td>
+                                                <td>업무협조</td>
+                                                <td>2023-02-09~2023-02-09</td>
+                                                <td>본부대</td>
+                                                <td>홍길동</td>
+                                                <td>홍길동</td>
+                                                <td>박사랑</td>
+                                                <td>1차승인대기</td>
+                                            </tr>
+                                            <tr>
+                                                <td>공무원</td>
+                                                <td>전체</td>
+                                                <td>222-2222</td>
+                                                <td>일병</td>
+                                                <td>홍길동</td>
+                                                <td>업무협조</td>
+                                                <td>2023-02-09~2023-02-09</td>
+                                                <td>본부대</td>
+                                                <td>홍길동</td>
+                                                <td>홍길동</td>
+                                                <td>박사랑</td>
+                                                <td>1차승인대기</td>
+                                            </tr>
+                                            <tr>
+                                                <td>공무원</td>
+                                                <td>전체</td>
+                                                <td>222-2222</td>
+                                                <td>일병</td>
+                                                <td>홍길동</td>
+                                                <td>업무협조</td>
+                                                <td>2023-02-09~2023-02-09</td>
+                                                <td>본부대</td>
+                                                <td>홍길동</td>
+                                                <td>홍길동</td>
+                                                <td>박사랑</td>
+                                                <td>1차승인대기</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- pagination -->
+                        <div class="d-flex align-items-center justify-content-center mt-5 p-relative">
+                            <select id="select-table-list" name="select-table-list" class="form-select w-80p p-absolute left-align" aria-label="Default select example">
+                            <option value="10" selected="selected">10</option>
+                            <option value="10" selected="selected">20</option>
+                            <option value="10" selected="selected">30</option>
+                            </select>
+                            <div class="d-flex">
+                            <nav aria-label="navigation" role="navigation" class="d-flex">
+                                <ul class="pagination my-0 justify-content-center">
+                                <li class="page-item" aria-label="이전페이지">
+                                    <a class="page-link page-navi" href="#">
+                                    <span aria-hidden="true" class="ti-angle-left"></span>
+                                    </a>
+                                </li>
+                                <li class="page-item active" aria-label="페이지 1" aria-current="page">
+                                    <a class="page-link" href="#" aria-current="true">
+                                    1
+                                    </a>
+                                </li>
+                                <li class="page-item" aria-label="페이지 생략">
+                                    <a class="page-link ti-more-alt link-dot" href="#">
+                                    </a>
+                                </li>
+                                <li class="page-item" aria-label="페이지 24">
+                                    <a class="page-link" href="#"> 24 </a>
+                                </li>
+                                <li class="page-item" aria-label="페이지 25">
+                                    <a class="page-link" href="#"> 25 </a>
+                                </li>
+                                <li class="page-item" aria-label="페이지 26">
+                                    <a class="page-link" href="#"> 26 </a>
+                                </li>
+                                <li class="page-item" aria-label="페이지 생략">
+                                    <a class="page-link ti-more-alt link-dot" href="#">
+                                    </a>
+                                </li>
+                                <li class="page-item" aria-label="페이지 50">
+                                    <a class="page-link" href="#"> 50 </a>
+                                </li>
+                                <li class="page-item" aria-label="다음 페이지">
+                                    <a class="page-link page-navi" href="#">
+                                    <span aria-hidden="true" class="ti-angle-right"></span>
+                                    </a>
+                                </li>
+                                </ul>
+                            </nav>
+                            <div class="d-flex gap-2 page-input-number">
+                                <input type="number" min="0" max="" class="form-control form-control-sm text-right" name="page-number-input" placeholder="page" id="" value="">
+                                <button type="button" class="btn btn-outline-primary btn-xs col-sm-auto bg-fff">이동</button>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- .//  pagination -->
+                        </div>
+                    </div>
+                    </section>
+            </section>
+          </div>
+          <!-- content-wrapper ends -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+      <!-- footer -->
+      <footer>
+        <div class="footer-top">
+          <span>※ 부당한 방법으로 본 체계에 접속하거나 정보를 유출·삭제·변경하는 자는 관계 법령에 따라 처벌을 받습니다.</span>          
+        </div>
+        <div class="footer-bottom d-flex align-items-center justify-content-center">
+          <div class="footer-bottom-inner">
+            <div class="footer-logo">
+              <img src="images/logo-footer.svg" alt="푸터전용 로고">
+            </div>
+            <p>Copyright © 대한민국 육군 . All Right Reserved.</p>
+          </div>  
+        </div>
+      </footer>
+      <!-- .// footer -->
+    </div>
+    <!-- container-scroller -->
+    <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="js/dataTables.select.min.js"></script>
+
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/todolist.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempus-dominus/6.0.0/js/tempus-dominus.min.js"></script>
+    <!-- plugin echart -->
+    <script src="vendors/echart.js/echarts.min.js"></script>
+    <script src="vendors/echart.js/wonderland.js"></script>
+    <script src="js/file-upload.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/main-v2.js"></script>
+    </body>
+</html>

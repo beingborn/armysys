@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <title>출입통제체계</title>
+      <!-- plugins:css -->
+      <link rel="stylesheet" href="vendors/feather/feather.css" />
+      <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" />
+      <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
+      <!-- endinject -->
+      <!-- Plugin css for this page -->
+      <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css" />
+      <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" />
+      <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css" />
+      <!-- End plugin css for this page -->
+      <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/tempus-dominus/6.0.0/css/tempus-dominus.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+      <!-- inject:css -->
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/common.css" />
+      <link rel="stylesheet" href="css/common-v2.css">
+      <!-- endinject -->
+      <link rel="shortcut icon" href="images/favicon.png" />
+      <script src="vendors/js/vendor.bundle.base.js"></script>
+      <!-- DatePicker jQuery -->
+      <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+      <!-- Bootstrap Datepicker CSS -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+          rel="stylesheet" />
+      <!-- Bootstrap Datepicker JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ko.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <header>
+        <nav class="navbar col-lg-12 p-0 d-flex flex-row">
+          <div class="d-flex header-inner inner w-100">
+            <!-- header-logo -->
+            <div class="text-center d-flex justify-content-center align-items-center">
+              <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" class="mr-2" alt="출입통제체계 (Access Control System)"/></a>
+              <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="출입통제체계 (Access Control System) 미니 로고버전"/></a>
+            </div>
+            <!-- ./ header-logo -->
+            <!-- navbar right fn -->
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+              <ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item nav-header">
+                  최근접속 2024.10.01 09:17:41
+                </li>
+                <li class="nav-item nav-header">
+                  2급 홍길동
+                </li>
+                <li class="nav-item nav-header">
+                  <a class="nav-link" href="#">
+                    <i class="ti-power-off"></i>
+                    <span>로그아웃</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- navbar right fn -->
+          </div>
+        </nav>
+        <div class="gnb main align-items-center d-flex">
+          <div class="inner w-100 d-flex align-items-center gnb-in">
+            <ul class="d-flex align-items-center">
+              <li class="main-dep1">
+                <a href="#">출입신청관리</a>
+                <ul class="gnb-submenu dep2">
+                  <li><a href="#">출입신청현황</a></li>
+                  <li><a href="#">인원별현황</a></li>
+                  <li><a href="#">기간별현황 대시보드</a></li>
+                  <li><a href="#">부대현황 대시보드</a></li>
+                  <li><a href="#">총괄 출입신청 현황</a></li>
+                  <li><a href="#">신청현황</a></li>
+                  <li><a href="#">승인현황</a></li>
+                </ul>
+              </li>
+              <li class="main-dep1">
+                <a href="#">사용자관리</a>
+                <ul class="gnb-submenu dep2">
+                  <li><a href="#">메뉴1</a></li>
+                  <li><a href="#">메뉴2</a></li>
+                  <li><a href="#">메뉴3</a></li>
+                  <li><a href="#">메뉴4</a></li>
+                  <li><a href="#">메뉴5</a></li>
+                </ul>
+              </li>
+              <li class="main-dep1">
+                <a href="#">부대정보관리</a>
+                <ul class="gnb-submenu dep2">
+                  <li><a href="#">메뉴1</a></li>
+                  <li><a href="#">메뉴2</a></li>
+                  <li><a href="#">메뉴3</a></li>
+                  <li><a href="#">메뉴4</a></li>
+                  <li><a href="#">메뉴5</a></li>
+                </ul>
+              </li>
+              <li class="main-dep1">
+                <a href="#">시스템관리</a>
+                <ul class="gnb-submenu dep2">
+                  <li><a href="#">메뉴1</a></li>
+                  <li><a href="#">메뉴2</a></li>
+                  <li><a href="#">메뉴3</a></li>
+                  <li><a href="#">메뉴4</a></li>
+                  <li><a href="#">메뉴5</a></li>
+                </ul>
+              </li>
+              <li class="main-dep1">
+                <a href="#">모니터링</a>
+                <ul class="gnb-submenu dep2">
+                  <li><a href="#">메뉴1</a></li>
+                  <li><a href="#">메뉴2</a></li>
+                  <li><a href="#">메뉴3</a></li>
+                  <li><a href="#">메뉴4</a></li>
+                  <li><a href="#">메뉴5</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="nav-link ml-auto">
+              <a href="#" class="all-menu">
+                <i class="ti-menu"></i>
+              </a>
+              <!-- all-menu -->
+              <div class="all-menu-box">
+                <div class="inner">
+                  <!-- all-menu-header -->
+                  <div class="all-menu-header">
+                    <div class="all-menu-logo brand-logo">
+                      <a href="#" class="navbar-brand">
+                        <img src="./images/logo-transparent.svg" alt="전체 메뉴 로고">
+                      </a>
+                    </div>
+                    <button class="all-menu-close btn btn-txt pr-0 pl-0">
+                      <i class="ti-close text-dark"></i>
+                    </button>
+                  </div>
+                  <!-- .// all-menu-header -->
+                  <!-- all-menu-body -->
+                  <div class="all-menu-body">
+                    <div class="gnb all-menu">
+                      <div class="gnb-in">
+                        <ul class="d-flex align-items-center">
+                          <li>
+                            <a href="#">출입신청관리</a>
+                            <ul class="gnb-submenu dep2">
+                              <li><a href="#">출입신청현황</a></li>
+                              <li><a href="#">인원별현황</a></li>
+                              <li><a href="#">기간별현황 대시보드</a></li>
+                              <li><a href="#">부대현황 대시보드</a></li>
+                              <li><a href="#">총괄 출입신청 현황</a></li>
+                              <li><a href="#">신청현황</a></li>
+                              <li><a href="#">승인현황</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#">사용자관리</a>
+                            <ul class="gnb-submenu dep2">
+                              <li><a href="#">메뉴1</a></li>
+                              <li><a href="#">메뉴2</a></li>
+                              <li><a href="#">메뉴3</a></li>
+                              <li><a href="#">메뉴4</a></li>
+                              <li><a href="#">메뉴5</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#">부대정보관리</a>
+                            <ul class="gnb-submenu dep2">
+                              <li><a href="#">메뉴1</a></li>
+                              <li><a href="#">메뉴2</a></li>
+                              <li><a href="#">메뉴3</a></li>
+                              <li><a href="#">메뉴4</a></li>
+                              <li><a href="#">메뉴5</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#">시스템관리</a>
+                            <ul class="gnb-submenu dep2">
+                              <li><a href="#">메뉴1</a></li>
+                              <li><a href="#">메뉴2</a></li>
+                              <li><a href="#">메뉴3</a></li>
+                              <li><a href="#">메뉴4</a></li>
+                              <li><a href="#">메뉴5</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#">모니터링</a>
+                            <ul class="gnb-submenu dep2">
+                              <li><a href="#">메뉴1</a></li>
+                              <li><a href="#">메뉴2</a></li>
+                              <li><a href="#">메뉴3</a></li>
+                              <li><a href="#">메뉴4</a></li>
+                              <li><a href="#">메뉴5</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ./ all-menu-body -->
+                </div>
+              </div>
+              <!-- .// all-menu -->
+            </div>
+          </div>
+          <div class="gnb-bg"></div>
+        </div>
+      </header>
+          <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_settings-panel.html -->
+        <div class="theme-setting-wrapper">
+          <div id="settings-trigger"><i class="ti-arrow-up"></i></div>
+        </div>
+        <!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item depth-1">
+              <a class="nav-link is-active" data-toggle="collapse" href="#form-elements" aria-expanded="false"
+                aria-controls="form-elements">
+                <span class="menu-title">출입증 관리</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse show" id="form-elements">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">출입신청현황</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">인원별현황</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">기간별현황 대시보드</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">기간별현황</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">부대별현황 대시보드</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">부대별현황</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">총괄 출입신청현황</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">신청현황</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">승인현황</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item depth-1">
+              <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+                <span class="menu-title">이력 현황</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="icons">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="#">2depth</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item depth-1">
+              <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <span class="menu-title">인사 연동 관리</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="#">2depth</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="#">2depth</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="content-top">
+              <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <i class="fa fa-home mr-1"></i>
+                    <a href="#">
+                      홈
+                    </a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="#">
+                      출입증 관리
+                    </a>
+                  </li>
+                  <li class="breadcrumb-item active">
+                    <a href="#">
+                      출입신청현황
+                    </a>
+                  </li>
+                </ol>
+              </nav>
+              <div class="col-sm-12">
+                <h2 class="font-weight-bold text-left">출입신청현황</h2>
+              </div>
+            </div>
+            <!-- 월별 출입 신청 현황 -->
+            <section class="mt-40">
+              <div class="d-flex justify-content-between col-md-12">
+                <h4 class="h4-area-title">일별 출입신청현황</h4>
+                <span>* 현황지표는 당월 누적/당일 추이 기준</span>
+              </div>
+              <div class="cardgroup d-flex current-dashboard">
+                <div class="col-md-3">
+                  <div class="current-dashboard-card border">
+                    <span>현역/군무원/공무직</span>
+                    <div class="current-dashboard-rate">
+                      <h2 class="m-0 current-dashboard-total">1,349</h2>
+                      <span class="current-dashboard-state is-increase">+21</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="current-dashboard-card border">
+                    <span>병사</span>
+                    <div class="current-dashboard-rate">
+                      <h2 class="m-0 current-dashboard-total">17</h2>
+                      <span class="current-dashboard-state is-increase">+21</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="current-dashboard-card border">
+                    <span>민간인</span>
+                    <div class="current-dashboard-rate">
+                      <h2 class="m-0 current-dashboard-total">8</h2>
+                      <span class="current-dashboard-state is-decrease">-21</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="current-dashboard-card border">
+                    <span>고정출입자</span>
+                    <div class="current-dashboard-rate">
+                      <h2 class="m-0 current-dashboard-total">23</h2>
+                      <span class="current-dashboard-state is-increase">+21</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- .// 월별 출입 신청 현황 -->
+            <!-- 주간별 출입신청 현황, 당월 출입 신청 현황 -->
+            <section class="mt-60">
+              <div class="d-flex">
+                <div class="col-md-6">
+                  <div class="h4-area-flex align-items-center">
+                      <h4>주간별 출입신청현황</h4>
+                      <a href="#" class="text-gray">더보기<i class="ti-plus"></i></a>
+                  </div>
+                  <div class="card border-gray30 e-container">
+                    <div id="weekConditionBar" class="echart"></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="h4-area-flex align-items-center">
+                    <h4>당월 출입신청현황</h4>
+                    <a href="#" class="text-gray">더보기<i class="ti-plus"></i></a>
+                  </div>
+                  <div class="card border-gray30 e-container">
+                    <div id="monthCondition" class="echart"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- .// 주간별 출입신청 현황, 당월 출입 신청 현황 -->
+          </div>
+          <!-- content-wrapper ends -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+      <!-- footer -->
+      <footer>
+        <div class="footer-top">
+          <span>※ 부당한 방법으로 본 체계에 접속하거나 정보를 유출·삭제·변경하는 자는 관계 법령에 따라 처벌을 받습니다.</span>          
+        </div>
+        <div class="footer-bottom d-flex align-items-center justify-content-center">
+          <div class="footer-bottom-inner">
+            <div class="footer-logo">
+              <img src="images/logo-footer.svg" alt="푸터전용 로고">
+            </div>
+            <p>Copyright © 대한민국 육군 . All Right Reserved.</p>
+          </div>  
+        </div>
+      </footer>
+      <!-- .// footer -->
+    </div>
+    <!-- container-scroller -->
+    <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="js/dataTables.select.min.js"></script>
+
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/todolist.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempus-dominus/6.0.0/js/tempus-dominus.min.js"></script>
+    <!-- plugin echart -->
+    <script src="vendors/echart.js/echarts.min.js"></script>
+    <script src="vendors/echart.js/wonderland.js"></script>
+    <script src="js/file-upload.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/main-v2.js"></script>
+
+    <!-- echart bar -->
+    <script>
+      /* 주간별 통계 */
+      let weeklyBarChart = echarts.init(document.getElementById('weekConditionBar'), 'wonderland');
+      // 차트 옵션 설정
+      let weeklyBarOption = {
+          tooltip: { trigger: 'axis'},
+          legend: {orient: 'horizontal', right: 0},
+          grid: {
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
+          containLabel: true
+          },
+          xAxis: {
+              type: 'category',
+              data: ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일']
+          },
+          yAxis: {
+              type: 'value'
+          },
+          series: [
+          {
+              name: '금주',
+              type: 'bar',
+              data: [40, 123,123,100,135,111,55],
+              markPoint : {
+                  data : [{type: 'max', name : 'Max'}],
+              }
+          },
+          {
+              name: '전주',
+              type: 'bar',
+              data: [40, 45,23,100,90,111,55],
+              /* markPoint = 최댓값 표시 */
+              markPoint : {
+                  data : [{type: 'max', name : 'Max'}],
+              }
+          },
+          ]
+      };
+      weeklyBarChart.setOption(weeklyBarOption);
+
+
+
+      /* 월별 통계 */
+      let monthlyChart = echarts.init(document.getElementById('monthCondition'), 'wonderland');
+      let monthlyOption = { 
+          tooltip: { trigger: 'item' },
+          legend: { orient: 'horizontal', right: 0, itemGap : 20},
+          series: [
+          { 
+              type: 'pie', radius: '75%', center: ['40%', '50%'],
+              data: [
+                  { value: 1048, name: '현역' }, { value: 735, name: '군무원' }, 
+                  { value: 580, name: '공무원' },
+              ], 
+              emphasis: {
+                  itemStyle: { shadowBlur: 10, shadowOffsetX: 0, shadowColor: 'rgba(0, 0, 0, 0.5)' }
+              } 
+          }
+          ] 
+      };
+      monthlyChart.setOption(monthlyOption);
+      
+      // 창 크기 변경 시 차트 리사이즈
+      window.addEventListener('resize', function() { 
+        monthlyChart.resize();
+        weeklyBarChart.resize();
+      });
+
+    </script>
+
+  </body>
+</html>
