@@ -114,7 +114,9 @@
                         <th>버튼이 있는 스타일</th>
                         <td class="hasAnotherTag">
                             <button type="button" class="btn btn-dark btn-xs">비밀번호 초기화</button>
-                            <button type="button" class="btn btn-dark btn-xs">파일 첨부</button>
+                            <button type="button" class="btn btn-dark ico-before ico-upload btn-xs btn-file-select">
+                                <label for="file"><input type="file" name="file" id="file">파일첨부</label>
+                            </button>
                         </td>
                     </tr>
                     <!-- 비고 입력 란이 있는 tr -->
@@ -135,6 +137,7 @@
                             </div>
                         </td>
                     </tr>
+                    <!--검색 input과 검색 아이콘이 함께 있는 경우 -->
                     <tr>
                         <th>
                             <label class="must-type" for="searchInput">검색 input과 검색 아이콘이 함께 있는 경우</label>
@@ -148,13 +151,17 @@
                             </div>
                         </td>
                     </tr>
+                    <!-- 파일첨부 및 다운로드가 함께 있는 경우 -->
                     <tr>
                         <th>파일첨부 및 다운로드가 함께 있는 경우</th>
                         <td>
                             <div class="d-flex gap-2">
                                 <input type="text" class="form-control" id="searchInput">
-                                <button type="button" class="btn btn-dark btn-sm">
-                                    파일 첨부
+                                <button type="button" class="btn btn-dark ico-before ico-upload btn-sm btn-file-select">
+                                    <label for="file">
+                                        <input type="file" name="file" id="file">
+                                        파일선택
+                                    </label>
                                 </button>
                             </div>
                         </td>
@@ -251,6 +258,7 @@
                         <th>작성자</th>
                         <td>testUser</td>
                     </tr>
+                    <!-- 상세 내용 -->
                     <tr>
                         <th>내용</th>
                         <td class="board-detail" colspan="3">
@@ -261,6 +269,7 @@
                                 <p>2024년 노동조합 회계공시 하반기 추가 공시 등록기간을 아래와 같이 운영합니다.</p>
                         </td>
                     </tr>
+                    <!-- 첨부파일 -->
                     <tr>
                         <th>첨부파일</th>
                         <td colspan="3">
