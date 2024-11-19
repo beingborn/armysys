@@ -58,6 +58,7 @@ ul.demical > li {list-style: disc};
 .p-absolute.left-align {left: 0;}
 /* width setting */
 .w-80p {width: 80px;}
+.w-200p {width: 200px;}
 /* button group white-space nowrap */
 .noSpace-btn > button {white-space: nowrap;}
 
@@ -148,7 +149,7 @@ header .header-inner {padding: 0 15px;}
 table.td-whiteBg td {background: #fff;}
 .expandable-table {border-bottom: 1px solid var(--gray-30)}
 .expandable-table tr td {font-size: 14px; padding: 16px;}
-table.horizontal {border-right: 1px solid #ced4da; border-left: 1px solid var(--gray-30);}
+table.horizontal {border-right: 1px solid #ced4da; border-left: 1px solid var(--gray-30); font-size: 17px;}
 table.horizontal th {background: #007867; color: #fff; font-weight: 400; border-right: var(--gray-30);}
 table.horizontal label {font-weight: 400; margin: 0; font-size: inherit;}
 
@@ -158,8 +159,18 @@ table.horizontal label {font-weight: 400; margin: 0; font-size: inherit;}
 /* echart */
 .echart {height: 400px; width: 100%;}
 
+/* table-fixed */
+.table-fixed {table-layout: fixed;}
+
+/* board */
+.board .table .board-detail {white-space: normal;}
 /* board-list */
 .board-list ul > li > a {max-width: 99%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: inline-flex;}
+/* board detail */
+.board-detail-file {display: flex; align-items: center; color: #212529; text-decoration: none;}
+.board-detail-file::before {content: ''; display: inline-block; width: 24px; height: 24px; background: url(../images/ico_file_24.svg) no-repeat center; margin-right: 10px;}
+
+
 
 /* after label style */
 .after-ico-16 {display: inline-flex; align-items: center; gap: 8px;}

@@ -41,9 +41,9 @@
         -->
         <p style="color: red; padding-top: 80px;">* 제목과 input이 1대1로 매칭되는 가로테이블</p>
         <div class="table-scroll">
-            <table class="table display expandable-table pd-5 td-whiteBg horizontal">
+            <table class="table display expandable-table pd-5 td-whiteBg horizontal table-fixed">
                 <colgroup>
-                    <col style="width: 300px;">
+                    <col style="width: 350px;">
                     <col>
                 </colgroup>
                 <tbody>
@@ -70,13 +70,37 @@
                             <input type="text" placeholder="아이디를 입력하세요" class="form-control" id="example2" readonly>
                         </td>
                     </tr>
+                    <!-- input + 크기가 작은 경우 -->
+                    <tr>
+                        <th>
+                            <label for="examplee">Readonly 인풋</label>
+                        </th>
+                        <td class="hasAnotherTag">
+                            <input type="text" placeholder="아이디를 입력하세요" class="form-control" id="examplee" readonly style="--input-width: 240px">
+                        </td>
+                    </tr>
                     <!-- 셀렉트 -->
                     <tr>
                         <th>
-                            <label for="example3">셀렉트 only</label>
+                            <label for="example3">셀렉트 only type1</label>
                         </th>
                         <td class="hasAnotherTag">
                             <select class="form-select" aria-label="Default select example">
+                                <option value="1">예시1</option>
+                                <option value="2">예시2</option>
+                                <option value="3">예시3</option>
+                                <option value="4">예시4</option>
+                                <option value="5">예시4</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- 셀렉트 type2 -->
+                    <tr>
+                        <th>
+                            <label for="example3">셀렉트 only type2 너비 작은 것</label>
+                        </th>
+                        <td class="hasAnotherTag">
+                            <select class="form-select" aria-label="Default select example" style="--input-width: 240px">
                                 <option value="1">예시1</option>
                                 <option value="2">예시2</option>
                                 <option value="3">예시3</option>
@@ -141,7 +165,7 @@
         </div>
         <p style="color: red; padding-top: 80px;">* 2줄짜리 테이블</p>
         <div class="table-scroll">
-            <table class="table display expandable-table pd-5 td-whiteBg horizontal">
+            <table class="table display expandable-table pd-5 td-whiteBg horizontal table-fixed">
                 <colgroup>
                     <col style="width: 150px;">
                     <col style="width: auto">
@@ -207,5 +231,51 @@
                 </tbody>
             </table>
         </div>
+        <p style="color: red; padding-top: 80px;">* 공지사항 리스트 세트</p>
+        <div class="board">
+            <table class="table display expandable-table pd-5 td-whiteBg horizontal table-fixed">
+                <colgroup>
+                    <col style="width: 200px;">
+                    <col style="width: auto">
+                    <col style="width: 200px;">
+                    <col style="width: auto;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>제목</th>
+                        <td colspan="3">공지사항 제목입니다.</td>
+                    </tr>
+                    <tr>
+                        <th>작성일</th>
+                        <td>2024.te.st</td>
+                        <th>작성자</th>
+                        <td>testUser</td>
+                    </tr>
+                    <tr>
+                        <th>내용</th>
+                        <td class="board-detail" colspan="3">
+                                <p>2024년 노동조합 회계공시 하반기 추가 공시 등록기간을 아래와 같이 운영합니다. 운영시에 만약 무언가 되지 않는 게 있다면 운영시에 만약 무언가 되지 않는 게 있다면 운영시에 만약 무언가 되지 않는 게 있다면 절대로 그렇게 하셔서는 안됩니다.</p>
+                                <p>&nbsp;</p>
+                                <p>테스트테스트테스트</p>
+                                <p>게시판 내부 내용에 공백을 넣으시려면 엔티티 코드를 넣으셔야 합니다.</p>
+                                <p>2024년 노동조합 회계공시 하반기 추가 공시 등록기간을 아래와 같이 운영합니다.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>첨부파일</th>
+                        <td colspan="3">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <a href="guide.html" download class="m-0 board-detail-file">시스템 공지 안내문_20241201.pdf [2273050 byte]</a>
+                                <button type="button" class="btn btn-dark ico-before ico-upload btn-sm btn-file-select">
+                                    <i class="ti-download"></i>
+                                    다운로드
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="color: red; padding-top: 80px;">* end</p>
     </body>
 </html>

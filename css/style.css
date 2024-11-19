@@ -18964,9 +18964,12 @@ input[type="button"].btn-block {
   /* border: 1px solid #dee2e6; */
 }
 
+/* 20241118 이민혁 페이지 네이션 기존 scss 스타일링 덮어씌우기 위해 추가 */
 .page-item .page-link {
   border-radius: 4px;
   margin: 0 3px;
+  background: none;
+  border: 0;
 }
 
 .page-link:hover,
