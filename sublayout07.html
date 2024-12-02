@@ -304,54 +304,56 @@
                             </div>
                             <!-- content -->
                             <section class="mt-40 col-md-12">
-                                <div class="mb-20 text-right">
-                                    <p>[ 조회 기준 시 : 2024-12-01 12:56:48 ]</p>
-                                </div>
-                                <!-- 검색 영역 -->
-                                <div class="search-field d-flex align-items-center flex-column">
-                                    <!-- search-line -->
-                                    <div class="d-flex col-lg-10 justify-content-center">
-                                        <!-- date picker -->
-                                        <label for="datepicker" class="form-label">기간 설정</label>
-                                        <div class="datepicker-container">
-                                            <div class="d-flex align-items-center">
-                                                <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
-                                                    <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker2">
-                                                        <span class="input-group-text">
-                                                            <i class="fa fa-calendar"></i>
-                                                        </span>
-                                                    <div id="" class="invalid-feedback">
-                                                    올바른 형식이 아닙니다.
+                                <!-- 기간별 출입현황 -->
+                                <div class="mt-60">
+                                    <div class="card border-gray30 multi-layer">
+                                        <div class="h4-area-flex">
+                                            <h4>기간별 출입신청현황</h4>
+                                            <p>[ 조회 기준 시 : 2024-12-01 12:56:48 ]</p>
+                                        </div>
+                                        <!-- 검색 영역 -->
+                                        <div class="search-field d-flex align-items-center flex-column">
+                                            <!-- search-line -->
+                                            <div class="d-flex col-lg-10 justify-content-center">
+                                                <!-- date picker -->
+                                                <label for="datepicker" class="form-label">기간 설정</label>
+                                                <div class="datepicker-container">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                                                            <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker2">
+                                                                <span class="input-group-text">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </span>
+                                                            <div id="" class="invalid-feedback">
+                                                            올바른 형식이 아닙니다.
+                                                            </div>
+                                                        </div>
+                                                        <p class="start-end-date mx-2">~</p>
+                                                        <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                                                            <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker3">
+                                                                <span class="input-group-text">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </span>
+                                                            <div id="" class="invalid-feedback">
+                                                            올바른 형식이 아닙니다.
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <p class="start-end-date mx-2">~</p>
-                                                <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
-                                                    <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker3">
-                                                        <span class="input-group-text">
-                                                            <i class="fa fa-calendar"></i>
-                                                        </span>
-                                                    <div id="" class="invalid-feedback">
-                                                    올바른 형식이 아닙니다.
-                                                    </div>
+                                                <!-- .// date picker -->
+                                                <div class="d-flex pl-30 noSpace-btn">
+                                                    <button type="button" class="btn btn-outline-secondary btn-sm mr-15">초기화</button>
+                                                    <button type="button" class="btn btn-primary btn-sm">검색</button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- .// date picker -->
-                                        <div class="d-flex pl-30 noSpace-btn">
-                                            <button type="button" class="btn btn-outline-secondary btn-sm mr-15">초기화</button>
-                                            <button type="button" class="btn btn-primary btn-sm">검색</button>
+                                        <!-- ./ 검색 영역 -->
+                                        <!-- ./ search-line -->
+                                        <div class="e-container mt-5">
+                                            <div id="periodConditionBar" class="echart">
+                                                <img src="./images/img_echart_ex.png" alt="">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <!-- ./ search-line -->
-                                </div>
-                                <!-- ./ 검색 영역 -->
-                                <!-- 기간별 출입현황 -->
-                                <div class="mt-60">
-                                    <div class="h4-area-flex">
-                                        <h4>기간별 출입신청현황</h4>
-                                    </div>
-                                    <div class="card border-gray30 e-container">
-                                        <div id="periodConditionBar" class="echart">E차트 업데이트 전</div>
                                     </div>
                                 </div>
                                 <!-- ./ 기간별 출입현황 -->

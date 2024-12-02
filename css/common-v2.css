@@ -210,6 +210,8 @@ table.horizontal label {font-weight: 400; margin: 0; font-size: inherit;}
 	background: var(--primary);
 }
 
+.card.multi-layer {padding: 30px!important;}
+
 
 
 
