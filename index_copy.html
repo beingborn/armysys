@@ -214,17 +214,17 @@
       </header>
       <div class="inner padding">
         <section class="section-1">
-          <h2 class="font-weight-bold text-center">출입통제체계 현황</h2>
+          <h2 class="main-header-tit">출입통제체계 현황</h2>
           <div class="d-flex">
               <div class="col-md-8">
                 <div class="h4-area-flex align-items-center">
                   <h4>공지사항</h4>
-                  <a href="#" class="text-gray">
+                  <a href="#" class="more-btn">
                     더보기
-                    <i class="ti-plus"></i>
+                    <!-- <i class="ti-plus"></i> -->
                   </a>
                 </div>
-                <div class="board-list card border border-gray">
+                <div class="board-list card">
                   <div class="card-body">
                     <ul class="d-flex flex-column p-0 m-0 gap-24 text-black font-size-17">
                       <li class="d-flex justify-content-between">
@@ -253,11 +253,11 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 d-flex flex-column pl-20">
+              <div class="col-md-4 d-flex flex-column">
                 <div class="h4-area-flex">
                   <h4>프로그램 다운로드</h4>
                 </div>
-                <div class="card border border-gray flex-grow-1">
+                <div class="card flex-grow-1">
                   <div class="card-body">
                     <ul class="d-flex flex-column text-black gap-24 font-size-17 demical">
                       <li><a href="#">햄스터 드라이버</a></li>
@@ -269,16 +269,16 @@
                 </div>
               </div>
           </div>
-          <div class="section-bg"></div>
+          <!-- <div class="section-bg"></div> -->
         </section>
         <section class="mt-40">
-          <div class="d-flex justify-content-between col-md-12">
+          <div class="h4-area-flex">
             <h4 class="h4-area-title">출입신청현황</h4>
-            <span>* 현황지표는 당월 누적/당일 추이 기준</span>
+            <small><span class="text-red-eb">*</span> 현황지표는 당월 누적/당일 추이 기준</small>
           </div>
           <div class="cardgroup d-flex current-dashboard">
-            <div class="col-md-3">
-              <div class="current-dashboard-card border">
+            <div class="col-lg-4">
+              <div class="current-dashboard-card bg-green-37">
                 <span>현역/군무원/공무직</span>
                 <div class="current-dashboard-rate">
                   <h2 class="m-0 current-dashboard-total">1,349</h2>
@@ -286,8 +286,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="current-dashboard-card border">
+            <div class="col-lg-4">
+              <div class="current-dashboard-card bg-cyan-00">
                 <span>병사</span>
                 <div class="current-dashboard-rate">
                   <h2 class="m-0 current-dashboard-total">17</h2>
@@ -295,21 +295,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="current-dashboard-card border">
+            <div class="col-lg-4">
+              <div class="current-dashboard-card bg-blue-43">
                 <span>민간인</span>
                 <div class="current-dashboard-rate">
                   <h2 class="m-0 current-dashboard-total">8</h2>
                   <span class="current-dashboard-state is-decrease">-21</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="current-dashboard-card border">
-                <span>고정출입자</span>
-                <div class="current-dashboard-rate">
-                  <h2 class="m-0 current-dashboard-total">23</h2>
-                  <span class="current-dashboard-state is-increase">+21</span>
                 </div>
               </div>
             </div>
@@ -319,7 +310,6 @@
           <a href="#" class="text-gray">더보기<i class="ti-plus"></i></a>
         </div>
         <div class="row">
-          <div class="col-lg-12">
             <div class="table-scroll">
               <!-- id="dataTable"  -->
               <table class="table display expandable-table text-center pb-5 td-whiteBg">
@@ -383,7 +373,6 @@
                 </tbody>
               </table>
             </div>
-          </div>
         </div>
         <!-- section 3 -->
         <section class="mt-60">
@@ -393,7 +382,7 @@
                   <h4>주간별 출입신청현황</h4>
                   <a href="#" class="text-gray">더보기<i class="ti-plus"></i></a>
               </div>
-              <div class="card border-gray30">
+              <div class="card">
                 <div id="weekCondition" class="echart"></div>
               </div>
             </div>
@@ -402,7 +391,7 @@
                 <h4>당월 출입신청현황</h4>
                 <a href="#" class="text-gray">더보기<i class="ti-plus"></i></a>
               </div>
-              <div class="card border-gray30">
+              <div class="card">
                 <div id="monthCondition" class="echart"></div>
               </div>
             </div>

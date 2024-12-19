@@ -9339,6 +9339,12 @@
     --heading-mob-font-size-h6: 16px;
     --bs-border-radius-sm: 0.25rem;
     --bs-border-radius-lg: 0.5rem;
+
+    --new-green-37 : #37A981;
+    --new-green-15 : #158073;
+    --new-cyan-00 : #00B1B7;
+    --new-blue-43 : #438EC3;
+    --new-red-eb : #EB2B2E;
   }
   
   *,
@@ -9349,7 +9355,7 @@
   
   html {
     font-family: sans-serif;
-    line-height: 1.15;
+    line-height: 150%;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
@@ -9376,10 +9382,10 @@
     line-height: 1.5;
     color: #1f1f1f;
     text-align: left;
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
     /* width: 1921px !important; */
     /* max-width: 1921px; */
-    letter-spacing: -1px;
+    /* letter-spacing: -1px; */
   }
   
   [tabindex="-1"]:focus:not(:focus-visible) {
@@ -9929,8 +9935,8 @@
   .row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    /* margin-right: -15px; */
+    /* margin-left: -15px; */
   }
   
   .no-gutters {
@@ -10018,10 +10024,12 @@
     position: relative;
     width: 100%;
     /* 20241108 이민혁 수정*/
-    padding-right: 15px;
-    padding-left: 15px;
+    /* padding-right: 15px; */
+    /* padding-left: 15px; */
     max-width: 1921px;
   }
+
+  [class^=col-] + [class^=col-] {padding-left: 32px;}
   
   .col {
     flex-basis: 0;
@@ -18662,9 +18670,9 @@
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 1px solid #e3e3e3;
+    border: 1px solid #d3d3d3;
     border-radius: 20px;
-    padding: 1rem !important;
+    padding: 10px;
   }
   
   .card > hr {
@@ -18697,7 +18705,7 @@
   .card-body {
     flex: 1 1 auto;
     min-height: 1px;
-    padding: 1.25rem;
+    /* padding: 1.25rem; */
   }
   
   .card-title {
@@ -28747,7 +28755,7 @@
     -webkit-transition: background 0.25s ease;
     -moz-transition: background 0.25s ease;
     -ms-transition: background 0.25s ease;
-    border: none;
+    /* border: none; */
   }
   
   .card.tale-bg {
@@ -28759,7 +28767,7 @@
   }
   
   .card .card-body {
-    padding: 1.25rem 1.25rem;
+    padding: 20px;
   }
   
   .card .card-body + .card-body {

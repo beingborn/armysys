@@ -19,7 +19,7 @@
 
 /* inner 2024/11/07 이민혁 추가 */
 #main-body {background: none;}
-.inner {max-width: 1920px; margin: 0px auto;}
+.inner {max-width: 1440px; margin: 0px auto;}
 .inner.padding {padding-bottom: 15rem;}
 /* new border */
 .border-gray {border-color: #e8e8e8;}
@@ -66,6 +66,11 @@ ul.demical > li {list-style: disc;}
 /* button group white-space nowrap */
 .noSpace-btn > button {white-space: nowrap;}
 
+/* bg */
+.bg-green-37 {background: var(--new-green-37)!important;}
+.bg-cyan-00 {background: var(--new-cyan-00)!important;}
+.bg-blue-43 {background: var(--new-blue-43)!important;}
+
 
 /* border style */
 .border-gray30 {border: 1px solid var(--gray-30)!important;}
@@ -83,9 +88,9 @@ header .header-inner {padding: 0 15px;}
 
 /* gnb 1depth styling */
 .gnb .gnb-in > ul {margin: 0; padding: 0;}
-.gnb .gnb-in > ul > li {position: relative; text-align: center; width: 188px; height: 100%; line-height: 80px; box-sizing: border-box;}
+.gnb .gnb-in > ul > li {position: relative; text-align: center; width: 240px; height: 100%; line-height: 80px; box-sizing: border-box;}
 .gnb .gnb-in > ul > li:hover::after {content: ''; position: absolute;  left: 0; bottom: 0; width: 100%; height: 2px; }
-.gnb .gnb-in > ul > li > a {display: block; font-weight: 700; text-decoration: none;}
+.gnb .gnb-in > ul > li > a {display: block; font-weight: 700; text-decoration: none; font-size: 20px;}
 .gnb .gnb-sub {display: none;}
 
 /* gnb-main */
@@ -103,6 +108,9 @@ header .header-inner {padding: 0 15px;}
 .gnb.all-menu .gnb-in > ul > li > a {color: #000;}
 .gnb.all-menu .gnb-submenu {display: flex; flex-direction: column; gap: 18px;}
 .gnb.all-menu .gnb-in > ul > li:hover::after {background-color: #007867;}
+
+/* 메인 페이지 */
+.main-header-tit {font-weight: 700; font-size: 48px; text-align: center; margin: 60px 0;}
 
 
 /* footer bottom */
@@ -135,7 +143,7 @@ header .header-inner {padding: 0 15px;}
 /* block */
 /* 신청 현황 */
 .current-dashboard-total {font-size: 36px;}
-.current-dashboard-card {padding: 28px; background: #fff; border: 1px solid #282f3a; border-radius: 20px; align-content: center; min-height: 180px;}
+.current-dashboard-card {padding: 28px; border-radius: 20px; align-content: center; min-height: 172px; color: #fff;}
 .current-dashboard-rate {margin-top: 14px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;}
 .current-dashboard-state {font-size: 1.8rem; display: flex; align-items: center;}
 .current-dashboard-state::after {content: ''; width: 2rem; height: 2rem; background-size: contain; display: inline-block;}
@@ -160,6 +168,15 @@ table.horizontal label {font-weight: 400; margin: 0; font-size: inherit;}
 
 /* 필수 입력 (임시) */
 .must-type::after {content: '*'; margin-left: 2px; color: #e92e28;}
+.text-red-eb {color:#EB2B2E}
+
+/* h4 area flex */
+.h4-area-flex small {font-size: 16px; color: #666666; font-weight: 500;} 
+.h5-area-flex small {font-size: 16px; color: #666666; font-weight: 500;} 
+
+/* more - btn  */
+.more-btn {color :#666666; font-weight: 500; font-size: 16px; display: inline-flex; align-items: center; line-height: 24px;}
+.more-btn::after {content: ''; display: inline-block; vertical-align: middle; width: 24px; height: 24px; background: url(../images/ico_more.svg) no-repeat center; background-size: cover;} 
 
 /* echart */
 .echart {height: 400px; width: 100%;}
@@ -181,15 +198,13 @@ table.horizontal label {font-weight: 400; margin: 0; font-size: inherit;}
 .after-ico-16.new-item::after {background-image: url(/images/ico-new.svg); background-size: contain;}
 
 /* h4 area flex (더보기 포함) */
-.h4-area-flex {display: flex; justify-content: space-between; margin-bottom: 20px;}
+.h3-area-flex {display: flex; justify-content: space-between; margin-bottom: 10px;}
+.h4-area-flex {display: flex; justify-content: space-between; margin-bottom: 10px;}
 .h4-area-flex > h4 {margin: 0; padding: 0;}
-.h3-area-flex {display: flex; justify-content: space-between; margin-bottom: 20px;}
-.h5-area-flex {display: flex; justify-content: space-between; margin-bottom: 20px;}
+.h5-area-flex {display: flex; justify-content: space-between; margin-bottom: 10px;}
 .h5-area-flex > h5 {margin: 0; padding: 0;}
 
 /* main-section */
-.section-1 {position: relative; padding-top: 60px; padding-bottom: 20px;}
-.section-1 .section-bg {position: absolute; top: 0; width: 100vw; background: #f9faf9; height: 100%; margin-left: calc(-50vw + 50%); z-index: -1;}
 
 /* login box */
 .login-box {padding: 60px; background: #fff; border-radius: 20px; border: 1px solid var(--gray-30);}
@@ -212,6 +227,19 @@ table.horizontal label {font-weight: 400; margin: 0; font-size: inherit;}
 
 .card.multi-layer {padding: 30px!important;}
 
+/* search-group */
+.search-field {display: flex; justify-content: center; width: 100%; background: #F0F0F0; padding: 32px 0;}
+.search-field .form-label {font-size: 15px; margin-right: 20px;}
+.search-field .search-group {width: 664px;}
+.search-field .search-group .search-row {display: flex;}
+.search-field .search-group .search-row + .search-row {margin-top: 12px;}
+.search-field .search-group .search-row select {width: 180px;}
+.search-field .search-group .search-row select ~ input {margin-left: 8px;}
+.search-field .search-group .search-row input[type="text"] {flex: 1;}
+.search-field .search-group .search-box {display: flex; flex-grow: 1;}
+.search-field .datepicker-container {display: flex;}
+.search-field .datepicker-container .input-group.date + .input-group.date {margin-left: 8px;}
+.search-field .datepicker-container .input-group.date {width: 147.5px;}
 
 
 
