@@ -4,8 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>출입통제체계</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="vendors/feather/feather.css" />
+    <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" />
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css" />
+    <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" />
+    <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css" />
+    <!-- End plugin css for this page -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tempus-dominus/6.0.0/css/tempus-dominus.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/common-v2.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <script src="vendors/js/vendor.bundle.base.js"></script>
+    <!-- DatePicker jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- Bootstrap Datepicker CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+        rel="stylesheet" />
+    <!-- Bootstrap Datepicker JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ko.min.js"></script>
 </head>
+<style>
+    body > div {max-width: 1440px;}
+    body > div + div {margin-top: 20px; border: 1px dashed #d8d8d8; padding: 12px;}
+</style>
+
 <body>
-    안뇽
+    <div>
+        <div class="search-field">
+            <div class="search-group">
+                <div class="search-row">
+                    <div class="search-box">
+                        <label for="armyKeyword" class="form-label">부대명</label>
+                        <input type="text" id="searchKeyword" name="searchKeyword" class="form-control" placeholder="검색어를 입력하세요.">
+                        <button type="button" class="btns fixed-m btns-bd-15" onclick="resetBtn({ clearSelects : false, clearDate: false })">초기화</button>
+                        <button type="button" onclick="search();" class="btns fixed-m bg-green-15">검색</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="search-field">
+            <div class="search-group">
+                <div class="search-row">
+                    <div class="search-box">
+                        <label class="form-label">전체검색</label>
+                        <select class="form-select">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                        <input type="text" placeholder="검색어를 입력하세요." class="form-control">
+                    </div>
+                </div>
+                <div class="search-row" style="position: relative;">
+                    <div class="search-box">
+                        <label class="form-label">결제상태</label>
+                        <select class="form-select">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                    <div class="search-box date-collect">
+                        <div class="datepicker-container">
+                            <label for="" class="form-label">기간설정</label>
+                            <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                                <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker0">
+                            </div>
+                            <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                                <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker1">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="position: absolute; right: 0; margin-right: -40px">
+                        <button type="button" class="btns fixed-m btns-bd-15" onclick="resetBtn({ clearSelects : false, clearDate: false })">초기화</button>
+                        <button type="button" onclick="search();" class="btns fixed-m bg-green-15">검색</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 </body>
 </html>
