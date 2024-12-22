@@ -1,12 +1,36 @@
-/* 메인 화면용 gnb 호버 애니메이션 */
-$(document).ready(function () {
-  $(".gnb.main .main-dep1").on("mouseover", function () {
-    $(".gnb.main").addClass("is-open");
-  });
-  $(".gnb.main .main-dep1").on("mouseleave", function () {
-    $(".gnb.main").removeClass("is-open");
-  });
-});
+$(document).ready(function(){
+    function gnbshow(){
+        $(".gnb.main").addClass("is-open");
+        $('.black-bg').addClass('on');
+    }
+    
+    function gnbhide(){
+        $(".gnb.main").removeClass("is-open");
+        $('.black-bg').removeClass('on');
+    }
+    
+    $(document).on('mouseover', '.main-dep1 , .gnb-in, .gnb-bg', function(){
+        gnbshow()
+    })
+
+    $(document).on('mouseleave', '.main-dep1 , .gnb-in, .gnb-bg', function(){
+        gnbhide()
+    })
+
+    $('.all-menu-toggle').click(function(){
+        var hasClass = $(this).hasClass('is-active');
+
+        if(hasClass){
+            $(this).removeClass('is-active')
+            gnbhide()
+        } else {
+            $(this).addClass('is-active')
+            gnbshow();
+            $('.gnb').unbind();
+        }
+        return false;
+    })
+})
 
 /* 전체 메뉴 활성화 */ 
 $('.all-menu').on('click',function(){

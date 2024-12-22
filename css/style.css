@@ -9637,6 +9637,10 @@ input[type="checkbox"] {
     padding: 0;
 }
 
+input[type="checkbox"] {width: 22px; height: 22px; border-radius: 4px; appearance: none; border: 1px solid #999999; }
+
+
+
 textarea {
     overflow: auto;
     resize: vertical;
@@ -31158,7 +31162,7 @@ dl li {
 .jsgrid .jsgrid-pager .jsgrid-pager-page .page-link:focus,
 .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a:focus,
 .jsgrid .jsgrid-pager .jsgrid-pager-page a:focus {
-    background: inherit;
+    /* background: inherit; */
 }
 
 .pagination .page-item .page-link i:before,
