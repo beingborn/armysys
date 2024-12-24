@@ -37,47 +37,40 @@
     <body>
         <!-- 로그인 페이지의 경우 body 밑에 login page 클래스 삽입 -->
         <div class="container-scroller login-page">
-
 			<div class="container-fluid page-body-wrapper full-page-wrapper">
 				<div class="content-wrapper d-flex align-items-center auth mx-auto">
-					<div class="row w-100 justify-content-center">
-						<div class="col-lg-4">
-							<div class="d-flex flex-column h-100">
-								<h2 class="" style="margin-top: 12px;">출입통제현황 시스템</h2>
-								<div class="card border-gray30 flex-grow-1">
-									<div class="card-body">
-										<div class="card-title login-notice-title">공지사항</div>
-										<div class="board-list">
-											<ul id="loginBoard" class="d-flex flex-column p-0 m-0 gap-24 text-black font-size-17">
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 login-area border-left-gray30">
-							<div>
-								<div class="auth-form-light text-left auth-form-padding">
-									<form class="pt-3" id="formContainer">
-										<div class="form-floating mb-3">
-											<input class="form-control" id="inputID" placeholder="아이디">
-										</div>
-										<div class="form-floating mb-3">
-											<input class="form-control" id="inputPW" type="password" placeholder="비밀번호">
-										</div>
-										<div class="d-grid gap-2 mt-4">
-											<input id="userType" type="hidden" value="A">
-											<a class="btn btn-block btn-info btn-lg font-weight-medium auth-form-btn txt-w" href="javascript:fn_sys_login()" type="button">로그인</a>
-										</div>
-										<div class="d-flex align-items-center justify-content-between mt-4 mb-3">
-											<p>5회 이상 로그인 실패시 비밀번호 변경이 필요합니다.</p>
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-						<p class="mt-60">※ 부당한 방법으로 본 체계에 접속하거나 정보를 유출·삭제·변경하는 자는 관계 법령에 따라 처벌을 받습니다.</p>
-					</div>
+                    <div class="login-wrap">
+                        <div class="login-header">
+                            <div class="login-header-logo">
+                                <img src="images/logo-footer.svg" alt="로고">
+                            </div>
+                            <h2>출입통제현황시스템</h2>
+                        </div>
+                        <div class="login-body">
+                            <div class="login-body-wrap">
+                                <div class="card login-notice">
+                                    <h2 class="login-notice-tit">공지사항</h2>
+                                </div>
+                                <div class="card login-form">
+                                    <form id="formContainer">
+                                        <div class="form-wrap">
+                                            <input class="form-control" id="inputID" placeholder="아이디를 입력하세요.">
+                                        </div>
+                                        <div class="form-wrap">
+                                            <input class="form-control" type="password" id="inputPW" placeholder="비밀번호를 입력하세요.">
+                                        </div>
+                                        <div class="form-wrap">
+                                            <a type="button" class="login-form-btn" href="javascript:fn_sys_login()">로그인</a>
+                                        </div>
+                                    </form>
+                                    <p class="login-body-info">5회 이상 로그인 실패시 비밀번호 변경이 필요합니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="login-foot">
+                            <p>※ 부당한 방법으로 본 체계에 접속하거나 정보를 유출·삭제·변경하는 자는 관계 법령에 따라 처벌을 받습니다.</p>
+                        </div>
+                    </div>
 				</div>
 			</div>
 		</div>

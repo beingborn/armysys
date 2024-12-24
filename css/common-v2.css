@@ -130,20 +130,12 @@ header #loginUserName {font-weight: 700;}
 /* layout */
 /* gnb common style */
 .gnb {position: relative; z-index: 999;}
-<<<<<<< HEAD
 .gnb-submenu { position: absolute; top: 100%; width: 100%; left: 0; padding-top: 20px; padding-left: 0; z-index: 10; height: 500px; color: black;}
-=======
-.gnb-submenu { position: absolute; top: 100%; width: 100%; left: 0; padding-top: 20px; padding-left: 0; z-index: 10; height: 383px; color: black;}
->>>>>>> 59906c3dfec440f29557eb1d3e4263ea71ab4dcf
 /* gnb-submenu styling */
 .gnb.main .gnb-submenu > li {text-align: left; line-height: 150%; white-space: nowrap;}
 .gnb-submenu > li > a {color: #666666; font-size: 18px; line-height: 27px;}
 .gnb-submenu > li > a:hover {color: #000000; font-weight: 700; text-decoration: none;}
-<<<<<<< HEAD
 .gnb-bg {background: #fff; width: 100%; position: absolute; left: 0; height: 500px; top: 100%; z-index: 9; display: none;}
-=======
-.gnb-bg {background: #fff; width: 100%; position: absolute; left: 0; height: 383px; top: 100%; z-index: 9; display: none;}
->>>>>>> 59906c3dfec440f29557eb1d3e4263ea71ab4dcf
 
 /* gnb 1depth styling */
 .gnb .gnb-in > ul {margin: 0; padding: 0; justify-content: space-between; width: 100%;}
@@ -258,7 +250,17 @@ header #loginUserName {font-weight: 700;}
 
 /* 로그인 페이지 */
 .login-page .container-fluid {max-width: none;}
-
+.login-page .content-wrapper {max-width: none;}
+.login-wrap {margin: 0px auto;}
+.login-header {display: flex; align-items: center; justify-content: center; margin-bottom: 40px;}
+.login-header-logo {height: 48px; padding-right: 20px;}
+.login-header-logo > img {width: 100%; height: 100%; object-fit: cover;}
+.login-header h2 {font-size: 40px; position: relative; padding-left: 20px;}
+.login-header h2::before {content: ''; display: inline-block; width: 1px; height: 40px; background: #999999; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
+.login-body-wrap {display: flex; padding: 60px 60px 52px 60px; background:  #37A981; column-gap: 30px; border-radius: 20px;}
+.login-body-wrap > .card {width: 396px; height: 316px;}
+.login-foot {text-align: center; margin-top: 12px;}
+.login-foot > p {font-size: 14px; color: #444444;}
 
 /* 버튼 공통 */
 .btns {border: 0; color: #fff; display: inline-flex; justify-content: center; align-items: center; gap: 4px;}
