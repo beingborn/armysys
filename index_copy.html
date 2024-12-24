@@ -495,16 +495,22 @@
       weeklyChart.setOption(weeklyOption);
 
       /* 월별 통계 */
-      let monthlyChart = echarts.init(document.getElementById('monthCondition'), 'wonderland');
+      let monthlyChart = echarts.init(document.getElementById('monthCondition'));
       let monthlyOption = { 
           tooltip: { trigger: 'item' },
-          legend: { orient: 'horizontal', right: 0, itemGap : 20},
+          legend: 
+          { orient: 'horizontal', right: 0, itemGap : 20},
           series: [
           { 
-              type: 'pie', radius: '75%', center: ['40%', '50%'],
+              type: 'pie',
+
+              radius: ['25%','60%'], // 원 크기 줄이기 
+              center: ['25%','50%'], // 원 위치 변경
+              
               data: [
-                  { value: 1048, name: '현역' }, { value: 735, name: '군무원' }, 
-                  { value: 580, name: '공무원' },
+                  // 아이템 색상 변경
+                  { value: 1048, name: '현역', itemStyle: {color: '#37A981'} }, { value: 735, name: '군무원', itemStyle : {color: '#00B1B7'}  }, 
+                  { value: 580, name: '공무원', itemStyle: {color: '#438EC3'} },
               ], 
               emphasis: {
                   itemStyle: { shadowBlur: 10, shadowOffsetX: 0, shadowColor: 'rgba(0, 0, 0, 0.5)' }
@@ -513,6 +519,8 @@
           ] 
       };
       monthlyChart.setOption(monthlyOption);
+
+
     </script>
 
   </body>
