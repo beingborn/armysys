@@ -35,7 +35,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ko.min.js"></script>
   </head>
 
-  <body id="main-body">
+  <body id="main-body" style="position: relative;">
+    <img src="./images/메인펼침.jpg" alt="" style="position: absolute; max-width: 1920px; left: 0; top: 0; opacity: .0; z-index: 0;" >
     <div class="container-scroller">
       <!-- partial:partials/_navbar.html -->
       <header>
@@ -62,6 +63,9 @@
                     <span>로그아웃</span>
                   </a>
                 </li>
+                <li class="all-menu-toggle">
+                  <a href="#">올메뉴</a>
+                </li>
               </ul>
             </div>
             <!-- navbar right fn -->
@@ -73,11 +77,13 @@
               <li class="main-dep1">
                 <a href="#">출입신청관리</a>
                 <ul class="gnb-submenu dep2">
-                  <li><a href="#">출입신청현황</a></li>
+                  <li><a href="#">출입신청관리</a></li>
                   <li><a href="#">인원별현황</a></li>
                   <li><a href="#">기간별현황 대시보드</a></li>
-                  <li><a href="#">부대현황 대시보드</a></li>
-                  <li><a href="#">총괄 출입신청 현황</a></li>
+                  <li><a href="#">기간별현황</a></li>
+                  <li><a href="#">부대별현황 대시보드</a></li>
+                  <li><a href="#">부대별현황</a></li>
+                  <li><a href="#">총괄출입신청현황</a></li>
                   <li><a href="#">신청현황</a></li>
                   <li><a href="#">승인현황</a></li>
                 </ul>
@@ -85,129 +91,38 @@
               <li class="main-dep1">
                 <a href="#">사용자관리</a>
                 <ul class="gnb-submenu dep2">
-                  <li><a href="#">메뉴1</a></li>
-                  <li><a href="#">메뉴2</a></li>
-                  <li><a href="#">메뉴3</a></li>
-                  <li><a href="#">메뉴4</a></li>
-                  <li><a href="#">메뉴5</a></li>
+                  <li><a href="#">사용자관리</a></li>
+                  <li><a href="#">권한별사용자관리</a></li>
                 </ul>
               </li>
               <li class="main-dep1">
                 <a href="#">부대정보관리</a>
                 <ul class="gnb-submenu dep2">
-                  <li><a href="#">메뉴1</a></li>
-                  <li><a href="#">메뉴2</a></li>
-                  <li><a href="#">메뉴3</a></li>
-                  <li><a href="#">메뉴4</a></li>
-                  <li><a href="#">메뉴5</a></li>
+                  <li><a href="#">메뉴정보관리</a></li>
+                  <li><a href="#">부대인터페이스정보 관리</a></li>
                 </ul>
               </li>
               <li class="main-dep1">
                 <a href="#">시스템관리</a>
                 <ul class="gnb-submenu dep2">
-                  <li><a href="#">메뉴1</a></li>
-                  <li><a href="#">메뉴2</a></li>
-                  <li><a href="#">메뉴3</a></li>
-                  <li><a href="#">메뉴4</a></li>
-                  <li><a href="#">메뉴5</a></li>
+                  <li><a href="#">시스템관리</a></li>
+                  <li><a href="#">메뉴관리</a></li>
+                  <li><a href="#">권한관리</a></li>
+                  <li><a href="#">공통상세코드</a></li>
+                  <li><a href="#">공통코드</a></li>
+                  <li><a href="#">동기화</a></li>
+                  <li><a href="#">시스템로그</a></li>
+                  <li><a href="#">공지사항관리</a></li>
+                  <li><a href="#">점유율현황</a></li>
                 </ul>
               </li>
               <li class="main-dep1">
                 <a href="#">모니터링</a>
                 <ul class="gnb-submenu dep2">
-                  <li><a href="#">메뉴1</a></li>
-                  <li><a href="#">메뉴2</a></li>
-                  <li><a href="#">메뉴3</a></li>
-                  <li><a href="#">메뉴4</a></li>
-                  <li><a href="#">메뉴5</a></li>
+                  <li><a href="#">모니터링</a></li>
                 </ul>
               </li>
             </ul>
-            <div class="nav-link ml-auto">
-              <a href="#" class="all-menu">
-                <i class="ti-menu"></i>
-              </a>
-              <!-- all-menu -->
-              <div class="all-menu-box">
-                <div class="inner">
-                  <!-- all-menu-header -->
-                  <div class="all-menu-header">
-                    <div class="all-menu-logo brand-logo">
-                      <a href="#" class="navbar-brand">
-                        <img src="./images/logo-transparent.svg" alt="전체 메뉴 로고">
-                      </a>
-                    </div>
-                    <button class="all-menu-close btn btn-txt pr-0 pl-0">
-                      <i class="ti-close text-dark"></i>
-                    </button>
-                  </div>
-                  <!-- .// all-menu-header -->
-                  <!-- all-menu-body -->
-                  <div class="all-menu-body">
-                    <div class="gnb all-menu">
-                      <div class="gnb-in">
-                        <ul class="d-flex align-items-center">
-                          <li>
-                            <a href="#">출입신청관리</a>
-                            <ul class="gnb-submenu dep2">
-                              <li><a href="#">출입신청현황</a></li>
-                              <li><a href="#">인원별현황</a></li>
-                              <li><a href="#">기간별현황 대시보드</a></li>
-                              <li><a href="#">부대현황 대시보드</a></li>
-                              <li><a href="#">총괄 출입신청 현황</a></li>
-                              <li><a href="#">신청현황</a></li>
-                              <li><a href="#">승인현황</a></li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a href="#">사용자관리</a>
-                            <ul class="gnb-submenu dep2">
-                              <li><a href="#">메뉴1</a></li>
-                              <li><a href="#">메뉴2</a></li>
-                              <li><a href="#">메뉴3</a></li>
-                              <li><a href="#">메뉴4</a></li>
-                              <li><a href="#">메뉴5</a></li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a href="#">부대정보관리</a>
-                            <ul class="gnb-submenu dep2">
-                              <li><a href="#">메뉴1</a></li>
-                              <li><a href="#">메뉴2</a></li>
-                              <li><a href="#">메뉴3</a></li>
-                              <li><a href="#">메뉴4</a></li>
-                              <li><a href="#">메뉴5</a></li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a href="#">시스템관리</a>
-                            <ul class="gnb-submenu dep2">
-                              <li><a href="#">메뉴1</a></li>
-                              <li><a href="#">메뉴2</a></li>
-                              <li><a href="#">메뉴3</a></li>
-                              <li><a href="#">메뉴4</a></li>
-                              <li><a href="#">메뉴5</a></li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a href="#">모니터링</a>
-                            <ul class="gnb-submenu dep2">
-                              <li><a href="#">메뉴1</a></li>
-                              <li><a href="#">메뉴2</a></li>
-                              <li><a href="#">메뉴3</a></li>
-                              <li><a href="#">메뉴4</a></li>
-                              <li><a href="#">메뉴5</a></li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- ./ all-menu-body -->
-                </div>
-              </div>
-              <!-- .// all-menu -->
-            </div>
           </div>
           <div class="gnb-bg"></div>
         </div>
@@ -522,6 +437,6 @@
 
 
     </script>
-
+    <div class="black-bg"></div>
   </body>
 </html>

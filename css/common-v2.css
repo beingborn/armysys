@@ -130,12 +130,20 @@ header #loginUserName {font-weight: 700;}
 /* layout */
 /* gnb common style */
 .gnb {position: relative; z-index: 999;}
+<<<<<<< HEAD
 .gnb-submenu { position: absolute; top: 100%; width: 100%; left: 0; padding-top: 20px; padding-left: 0; z-index: 10; height: 500px; color: black;}
+=======
+.gnb-submenu { position: absolute; top: 100%; width: 100%; left: 0; padding-top: 20px; padding-left: 0; z-index: 10; height: 383px; color: black;}
+>>>>>>> 59906c3dfec440f29557eb1d3e4263ea71ab4dcf
 /* gnb-submenu styling */
 .gnb.main .gnb-submenu > li {text-align: left; line-height: 150%; white-space: nowrap;}
 .gnb-submenu > li > a {color: #666666; font-size: 18px; line-height: 27px;}
 .gnb-submenu > li > a:hover {color: #000000; font-weight: 700; text-decoration: none;}
+<<<<<<< HEAD
 .gnb-bg {background: #fff; width: 100%; position: absolute; left: 0; height: 500px; top: 100%; z-index: 9; display: none;}
+=======
+.gnb-bg {background: #fff; width: 100%; position: absolute; left: 0; height: 383px; top: 100%; z-index: 9; display: none;}
+>>>>>>> 59906c3dfec440f29557eb1d3e4263ea71ab4dcf
 
 /* gnb 1depth styling */
 .gnb .gnb-in > ul {margin: 0; padding: 0; justify-content: space-between; width: 100%;}

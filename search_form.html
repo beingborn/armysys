@@ -38,70 +38,283 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ko.min.js"></script>
 </head>
 <style>
+    body {margin: 0px auto; max-width: 1440px; margin-top: 40px;}
     body > div {max-width: 1440px;}
-    body > div + div {margin-top: 20px; border: 1px dashed #d8d8d8; padding: 12px;}
+    body > div + div {margin-top: 20px; padding: 12px;}
 </style>
 
 <body>
     <div>
+        <h2>달력이 있는 조합</h2>
         <div class="search-field">
-            <div class="search-group">
-                <div class="search-row">
-                    <div class="search-box">
-                        <label for="armyKeyword" class="form-label">부대명</label>
-                        <input type="text" id="searchKeyword" name="searchKeyword" class="form-control" placeholder="검색어를 입력하세요.">
-                        <button type="button" class="btns fixed-m btns-bd-15" onclick="resetBtn({ clearSelects : false, clearDate: false })">초기화</button>
-                        <button type="button" onclick="search();" class="btns fixed-m bg-green-15">검색</button>
+            <div class="search-input-group">
+                <div class="search-row search-min">
+                    <label class="form-label">전체검색</label>
+                    <select class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                    <input type="text" placeholder="검색어를 입력하세요." class="form-control">
+                </div>
+                <div class="search-row search-min">
+                    <label class="form-label">전체검색</label>
+                    <select class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                    <label for="" class="form-label">기간설정</label>
+                    <div class="datepicker-container">
+                        <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                            <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker0">
+                        </div>
+                        <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                            <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker1">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div>
-        <div class="search-field">
-            <div class="search-group">
-                <div class="search-row">
-                    <div class="search-box">
-                        <label class="form-label">전체검색</label>
-                        <select class="form-select">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                        </select>
-                        <input type="text" placeholder="검색어를 입력하세요." class="form-control">
-                    </div>
-                </div>
-                <div class="search-row" style="position: relative;">
-                    <div class="search-box">
-                        <label class="form-label">결제상태</label>
-                        <select class="form-select">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                        </select>
-                    </div>
-                    <div class="search-box date-collect">
-                        <div class="datepicker-container">
-                            <label for="" class="form-label">기간설정</label>
-                            <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
-                                <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker0">
-                            </div>
-                            <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
-                                <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker1">
-                            </div>
-                        </div>
-                    </div>
-                    <div style="position: absolute; right: 0; margin-right: -40px">
-                        <button type="button" class="btns fixed-m btns-bd-15" onclick="resetBtn({ clearSelects : false, clearDate: false })">초기화</button>
-                        <button type="button" onclick="search();" class="btns fixed-m bg-green-15">검색</button>
-                    </div>
+            <div class="search-btn-box">
+                <div class="search-btn-group">
+                    <button type="button" class="btns fixed-m btns-bd-15">초기화</button>
+                    <button type="button" class="btns fixed-m bg-green-15">검색</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <div>
+        <h2>max-width</h2>
+        <div class="search-field">
+            <div class="search-input-group">
+                <div class="search-row search-max">
+                    <label class="form-label">전체검색</label>
+                    <select class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                    <input type="text" placeholder="검색어를 입력하세요." class="form-control">
+                </div>
+                <div class="search-row search-min">
+                    <label class="form-label">전체검색</label>
+                    <select class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                    <label class="form-label">전체검색</label>
+                    <select class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                    <label for="" class="form-label">기간설정</label>
+                    <div class="datepicker-container">
+                        <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                            <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker0">
+                        </div>
+                        <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                            <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-btn-box">
+                <div class="search-btn-group">
+                    <button type="button" class="btns fixed-m btns-bd-15">초기화</button>
+                    <button type="button" class="btns fixed-m bg-green-15">검색</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <h2>min-width 조합</h2>
+        <div class="search-field">
+            <div class="search-input-group">
+                <div class="search-row search-min">
+                    <label class="form-label">전체검색</label>
+                    <select class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                    <input type="text" placeholder="검색어를 입력하세요." class="form-control">
+                </div>
+                <div class="search-row search-min">
+                    <label class="form-label">전체검색</label>
+                    <select class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                    <input type="text" placeholder="검색어를 입력하세요." class="form-control">
+                </div>
+            </div>
+            <div class="search-btn-box">
+                <div class="search-btn-group">
+                    <button type="button" class="btns fixed-m btns-bd-15">초기화</button>
+                    <button type="button" class="btns fixed-m bg-green-15">검색</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2>한줄에 많은 조합</h2>
+        <div class="search-field">
+            <div class="search-input-group">
+                <div class="search-row">
+                    <label class="form-label" style="--label-width: 69px">동기화 방식</label>
+                    <select class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                    <label for="" class="form-label">기간설정</label>
+                    <div class="datepicker-container">
+                        <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                            <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker0">
+                        </div>
+                        <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                            <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker1">
+                        </div>
+                    </div>
+                    <label for="" class="form-label">시간 설정</label>
+                    <select class="form-select">
+                        <option>NN시</option>
+                        <option>MM시</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                    <select class="form-select">
+                        <option>NN분</option>
+                        <option>MM분</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="search-btn-box">
+                <div class="search-btn-group">
+                    <button type="button" class="btns fixed-m btns-bd-15">초기화</button>
+                    <button type="button" class="btns bg-green-15 flexible-m">자동 동기화 시작</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="search-field">
+        <div class="search-group">
+            <div class="search-row">
+                <label class="form-label">결제상태</label>
+                <select class="form-select">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                <input type="text" placeholder="검색어를 입력하세요." class="form-control">
+            </div>
+            <div class="search-row">
+                <div class="search-box">
+                    <label class="form-label">결제상태</label>
+                    <select class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <label class="form-label">결제상태2</label>
+                    <select class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <div class="datepicker-container">
+                        <label for="" class="form-label">기간설정</label>
+                        <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                            <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker0">
+                        </div>
+                        <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                            <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-row" style="justify-content: end;">
+                <button type="button" class="btns fixed-m btns-bd-15" onclick="resetBtn({ clearSelects : false, clearDate: false })">초기화</button>
+                <button type="button" onclick="search();" class="btns fixed-m bg-green-15">검색</button>
+            </div>
+        </div>
+    </div>
+    <div class="search-field">
+        <div class="search-group">
+            <div class="search-row">
+                <div class="search-box">
+                    <label class="form-label">동기화방식</label>
+                    <select class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <div class="datepicker-container">
+                        <label for="" class="form-label">기간설정</label>
+                        <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                            <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker0">
+                        </div>
+                        <div class="input-group date" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                            <input type="text" class="form-control datepicker-input" placeholder="YYYY-MM-DD" required="" id="datepicker1">
+                        </div>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <label class="form-label">동기화방식</label>
+                    <select class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                    <select class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <button type="button" class="btns fixed-m btns-bd-15" onclick="resetBtn({ clearSelects : false, clearDate: false })">초기화</button>
+                    <button type="button" onclick="search();" class="btns fixed-m bg-green-15">검색</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </body>
