@@ -250,17 +250,33 @@ header #loginUserName {font-weight: 700;}
 
 /* 로그인 페이지 */
 .login-page .container-fluid {max-width: none;}
-.login-page .content-wrapper {max-width: none;}
+.login-page .content-wrapper {max-width: none; margin : 0;}
 .login-wrap {margin: 0px auto;}
 .login-header {display: flex; align-items: center; justify-content: center; margin-bottom: 40px;}
 .login-header-logo {height: 48px; padding-right: 20px;}
 .login-header-logo > img {width: 100%; height: 100%; object-fit: cover;}
-.login-header h2 {font-size: 40px; position: relative; padding-left: 20px;}
+.login-header h2 {font-size: 40px; position: relative; padding-left: 20px; margin: 0;}
 .login-header h2::before {content: ''; display: inline-block; width: 1px; height: 40px; background: #999999; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
-.login-body-wrap {display: flex; padding: 60px 60px 52px 60px; background:  #37A981; column-gap: 30px; border-radius: 20px;}
+.login-body-wrap {display: flex; padding: 60px 60px 52px 60px; background:  linear-gradient(121deg, #37A981 19.19%, #158073 85.27%); ; column-gap: 30px; border-radius: 20px;}
 .login-body-wrap > .card {width: 396px; height: 316px;}
 .login-foot {text-align: center; margin-top: 12px;}
 .login-foot > p {font-size: 14px; color: #444444;}
+/* login notice */
+.login-notice .login-notice-tit {margin: 0; padding-bottom: 12px; border-bottom: 1px solid #d8d8d8; font-size: 25px;} 
+.login-notice .board-list {padding: 0; margin-top: 20px; color: #444444; }
+.login-notice .board-list > li + li {margin-top: 12px;}
+.login-notice .board-list > li {display: flex; justify-content: space-between; align-items: center;}
+.login-notice .board-list > li > a {color: #444444; font-size: 14px;}
+.login-notice .board-list > li > span {color: #999999; font-size: 15px;}
+
+/* login form */
+.card.login-form {padding-top: 54px; padding-bottom: 54px;}
+.login-form .login-input-group input {height: 40px; border: 1px solid #d8d8d8; font-size: 14px;}
+.login-form .login-input-group .form-wrap + .form-wrap {margin-top: 12px;}
+.login-form .login-form-btn {height: 56px; color: #fff; display: flex; justify-content: center; align-items: center; border-radius: 8px; background: #158073; margin-top: 32px; font-size: 20px; font-weight: 600;}
+.login-form .login-body-info {color: #444444; font-size: 13px; margin-top: 8px;}
+.login-form .login-body-info::before {color: #444444;}
+
 
 /* 버튼 공통 */
 .btns {border: 0; color: #fff; display: inline-flex; justify-content: center; align-items: center; gap: 4px;}
@@ -275,6 +291,7 @@ header #loginUserName {font-weight: 700;}
 .btns.flexible-s {padding: 0 18px; min-height: 28px; border-radius: 4px; font-weight: 500; font-size: 13px;}
 .btns.fixed-xs {width: 60px; min-height: 28px; border-radius: 4px; font-weight: 500; font-size: 13px;}
 .btns.fixed-m {width: 80px; min-height: 40px; border-radius: 6px;}
+
 
 
 /* 인풋 공통 */
@@ -305,12 +322,14 @@ table.td-whiteBg td {background: #fff;}
 /* board */
 .board .table .board-detail {white-space: normal;}
 /* board-list */
-.board-list ul > li > a {max-width: 99%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: inline-flex;}
+.board-list > li > a {max-width: 99%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: inline-flex;}
 /* bullet-list */
 .bullet-list {padding-left: 0; margin-bottom: 0; margin-top: 8px;}
 .bullet-list > li + li {margin-top: 8px;}
 .bullet-list > li {color: #666666; padding-left: 20px;}
 .bullet-list > li::before {content: ''; display: inline-block; width: 4px; height: 4px; border-radius: 50%; background-color: #666666; vertical-align: middle; margin: -4px 8px 0 0; }
+.bullet {padding-left: 20px; text-indent: -20px;}
+.bullet::before {content: ''; display: inline-block; width: 4px; height: 4px; border-radius: 50%; background-color: #666666; vertical-align: middle; margin: -4px 8px 0 0; }
 
 /* board detail */
 .board-detail-file {display: flex; align-items: center; color: #212529; text-decoration: none;}
